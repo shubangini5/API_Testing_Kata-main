@@ -61,4 +61,12 @@ public class BookingService {
                 token
         );
     }
+    public Response deleteBooking(Integer bookingId,
+                                  String token) {
+
+        return apiClient.delete(
+                Endpoints.BOOKING + "/" + bookingId,
+                token
+        );
+    }
 }

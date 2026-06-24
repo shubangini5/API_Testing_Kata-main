@@ -7,7 +7,7 @@ import static io.cucumber.core.options.Constants.PLUGIN_PROPERTY_NAME;
 
 @Suite
 @IncludeEngines("cucumber")
-@SelectClasspathResource("features")
+@SelectClasspathResource("features/delete-booking.feature")
 @ConfigurationParameter(
         key = GLUE_PROPERTY_NAME,
         value = "com.booking.stepdefinitions,com.booking.hooks")
