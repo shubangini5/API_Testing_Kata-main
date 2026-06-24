@@ -6,6 +6,8 @@ Feature: Retrieve Booking
   I want to retrieve booking information
   So that I can verify existing reservations
 
+  Background:
+    Given the user is authenticated
   # =========================
   # Positive Scenarios
   # =========================
@@ -17,14 +19,11 @@ Feature: Retrieve Booking
       | roomid | firstname | lastname | depositpaid | checkin    | checkout   | email         | phone        |
       | 2      | John      | David    | true        | 2027-07-01 | 2027-07-02 | john@test.com | 329876543210 |
 
-    Then the response status code should be 201
-    And the booking id should be generated
+    Then the booking should be created successfully
 
     When the user retrieves the created booking
 
-    Then the response status code should be 200
-
-    And the booking details should match:
+    Then the booking details should match:
       | roomid | firstname | lastname | depositpaid | checkin    | checkout   | email         | phone        |
       | 2      | John      | David    | true        | 2027-07-01 | 2027-07-02 | john@test.com | 329876543210 |
 
@@ -42,7 +41,9 @@ Feature: Retrieve Booking
     And the error message contains "<message>"
 
     Examples:
-      | description          | action   | bookingId | statusCode | message   |
-      | Non-existing booking | retrieve | 999999    | 404        |           |
-      | Invalid booking ID   | retrieve | -1        | 404        | Not Found |
+      | description                   | action       | bookingId | statusCode | message       |
+      | Non-existing booking          | retrieve     | 999999    | 404        |               |
+      | Invalid booking ID            | retrieve     | -1        | 404        | Not Found     |
+      | Missing authentication cookie | noToken      | 1         | 401        | Unauthorized  |
+      | Invalid authentication cookie | invalidToken | 1         | 401        | invalid token |
 

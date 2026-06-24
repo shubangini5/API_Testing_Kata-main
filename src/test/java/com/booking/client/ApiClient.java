@@ -46,32 +46,28 @@ public class ApiClient {
         return RestAssured
                 .given()
                 .contentType(ContentType.JSON)
-                .cookie("token", token)
+                .header("Cookie", "token=" + token)
                 .when()
                 .get(endpoint);
     }
 
-    public Response put(String endpoint,
-                        Object requestBody,
-                        String token) {
+    public Response put(String endpoint, Object requestBody, String token) {
 
         return RestAssured
                 .given()
                 .contentType(ContentType.JSON)
-                .cookie("token", token)
+                .header("Cookie", "token=" + token)
                 .body(requestBody)
                 .when()
                 .put(endpoint);
     }
 
-    public Response patch(String endpoint,
-                          Object requestBody,
-                          String token) {
+    public Response patch(String endpoint, Object requestBody, String token) {
 
         return RestAssured
                 .given()
                 .contentType(ContentType.JSON)
-                .cookie("token", token)
+                .header("Cookie", "token=" + token)
                 .body(requestBody)
                 .when()
                 .patch(endpoint);
@@ -86,12 +82,12 @@ public class ApiClient {
                 .patch(endpoint);
     }
 
-    public Response delete(String endpoint,
-                           String token) {
+    public Response delete(String endpoint, String token) {
 
         return RestAssured
                 .given()
-                .cookie("token", token)
+                .contentType(ContentType.JSON)
+                .header("Cookie", "token=" + token)
                 .when()
                 .delete(endpoint);
     }
