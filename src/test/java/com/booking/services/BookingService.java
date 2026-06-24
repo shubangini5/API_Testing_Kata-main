@@ -51,4 +51,14 @@ public class BookingService {
                 token
         );
     }
+    public Response partialUpdateBooking(Integer bookingId,
+                                         Object request,
+                                         String token) {
+
+        return apiClient.patch(
+                Endpoints.BOOKING + "/" + bookingId,
+                request,
+                token
+        );
+    }
 }

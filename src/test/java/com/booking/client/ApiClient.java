@@ -69,8 +69,13 @@ public class ApiClient {
                 .contentType(ContentType.JSON)
                 .header("Cookie", "token=" + token)
                 .body(requestBody)
+                .log().all()
                 .when()
-                .patch(endpoint);
+                .patch(endpoint)
+                .then()
+                .log().all()
+                .extract()
+                .response();
     }
 
     public Response patch(String endpoint) {

@@ -8,9 +8,10 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
-import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Map;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class BookingSteps {
 
@@ -25,7 +26,8 @@ public class BookingSteps {
     @When("the user creates a booking with:")
     public void theUserCreatesABookingWith(DataTable dataTable) {
 
-        BookingRequest request = mapBookingRequest(dataTable);
+        BookingRequest request =
+                mapBookingRequest(dataTable);
 
         testContext.setBookingRequest(request);
 
@@ -35,12 +37,34 @@ public class BookingSteps {
         testContext.setResponse(response);
     }
 
+    @When("the user creates a booking with invalid data:")
+    public void theUserCreatesABookingWithInvalidData(
+            DataTable dataTable) {
+
+        BookingRequest request =
+                mapInvalidBookingRequest(dataTable);
+
+        Response response =
+                bookingService.createBooking(request);
+
+        testContext.setResponse(response);
+    }
+
+    @When("the user sends a PATCH request to the create booking endpoint")
+    public void theUserSendsAPatchRequestToTheCreateBookingEndpoint() {
+
+        Response response =
+                bookingService.createBookingUsingPatch();
+
+        testContext.setResponse(response);
+    }
+
     @Then("the booking should be created successfully")
     public void theBookingShouldBeCreatedSuccessfully() {
 
         assertEquals(
-                testContext.getResponse().statusCode(),
                 201,
+                testContext.getResponse().statusCode(),
                 "Booking was not created successfully"
         );
 
@@ -57,16 +81,37 @@ public class BookingSteps {
         testContext.setBookingId(bookingId);
     }
 
-    private BookingRequest mapBookingRequest(DataTable dataTable) {
+    @Then("the booking id should be generated")
+    public void bookingIdShouldBeGenerated() {
+
+        Integer bookingId =
+                testContext.getResponse()
+                        .jsonPath()
+                        .getInt("bookingid");
+
+        assertNotNull(
+                bookingId,
+                "Booking ID was not generated"
+        );
+
+        testContext.setBookingId(bookingId);
+    }
+
+    private BookingRequest mapBookingRequest(
+            DataTable dataTable) {
 
         Map<String, String> row =
-                dataTable.asMaps(String.class, String.class)
+                dataTable.asMaps(
+                                String.class,
+                                String.class)
                         .get(0);
 
-        BookingRequest request = new BookingRequest();
+        BookingRequest request =
+                new BookingRequest();
 
         request.setRoomid(
-                Integer.parseInt(row.get("roomid")));
+                Integer.parseInt(
+                        row.get("roomid")));
 
         request.setFirstname(
                 row.get("firstname"));
@@ -88,6 +133,67 @@ public class BookingSteps {
                 new BookingDates(
                         row.get("checkin"),
                         row.get("checkout"));
+
+        request.setBookingdates(
+                bookingDates);
+
+        return request;
+    }
+
+    private BookingRequest mapInvalidBookingRequest(
+            DataTable dataTable) {
+
+        Map<String, String> row =
+                dataTable.asMaps(
+                                String.class,
+                                String.class)
+                        .get(0);
+
+        BookingRequest request =
+                new BookingRequest();
+
+        if (!"[null]".equals(row.get("roomid"))) {
+            request.setRoomid(
+                    Integer.parseInt(
+                            row.get("roomid")));
+        }
+
+        request.setFirstname(
+                "[empty]".equals(row.get("firstname"))
+                        ? ""
+                        : row.get("firstname"));
+
+        request.setLastname(
+                "[empty]".equals(row.get("lastname"))
+                        ? ""
+                        : row.get("lastname"));
+
+        request.setDepositpaid(
+                Boolean.parseBoolean(
+                        row.get("depositpaid")));
+
+        request.setEmail(
+                "[empty]".equals(row.get("email"))
+                        ? ""
+                        : row.get("email"));
+
+        request.setPhone(
+                "[empty]".equals(row.get("phone"))
+                        ? ""
+                        : row.get("phone"));
+
+        BookingDates bookingDates =
+                new BookingDates();
+
+        if (!"[empty]".equals(row.get("checkin"))) {
+            bookingDates.setCheckin(
+                    row.get("checkin"));
+        }
+
+        if (!"[empty]".equals(row.get("checkout"))) {
+            bookingDates.setCheckout(
+                    row.get("checkout"));
+        }
 
         request.setBookingdates(
                 bookingDates);

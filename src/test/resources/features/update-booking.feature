@@ -14,13 +14,13 @@ Feature: Update Booking
 
     When the user creates a booking with:
       | roomid | firstname | lastname | depositpaid | checkin    | checkout   | email         | phone        |
-      | 2      | John      | David    | true        | 2027-06-01 | 2027-06-02 | john@test.com | 329876543210 |
+      | 2      | Johny     | David    | true        | 2027-06-01 | 2027-06-02 | john@test.com | 329876543210 |
 
     Then the booking should be created successfully
 
     When the user updates the booking with:
       | roomid | firstname | lastname | depositpaid | checkin    | checkout   | email         | phone        |
-      | 2      | Jane      | Smith    | false       | 2027-06-03 | 2027-06-04 | jane@test.com | 329876543211 |
+      | 2      | Jam       | Martin   | false       | 2027-06-03 | 2027-06-04 | jane@test.com | 329876543211 |
 
     Then the response status code should be 200
 
