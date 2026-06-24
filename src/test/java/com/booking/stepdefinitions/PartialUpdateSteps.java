@@ -14,9 +14,9 @@ public class PartialUpdateSteps {
     private final TestContext testContext;
     private final BookingService bookingService;
 
-    public PartialUpdateSteps(TestContext testContext) {
+    public PartialUpdateSteps(TestContext testContext, BookingService bookingService) {
         this.testContext = testContext;
-        this.bookingService = new BookingService();
+        this.bookingService = bookingService;
     }
 
     @When("the user partially updates the booking with:")

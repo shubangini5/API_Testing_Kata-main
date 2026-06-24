@@ -21,10 +21,10 @@ public class RetrieveSteps {
     private final BookingService bookingService;
     private final AuthService authService;
 
-    public RetrieveSteps(TestContext testContext) {
+    public RetrieveSteps(TestContext testContext, BookingService bookingService, AuthService authService) {
         this.testContext = testContext;
-        this.bookingService = new BookingService();
-        this.authService = new AuthService();
+        this.bookingService = bookingService;
+        this.authService = authService;
     }
 
     @Given("the user is authenticated")

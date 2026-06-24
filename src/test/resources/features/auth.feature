@@ -20,18 +20,18 @@ Feature: Hotel booking login
   # Negative Scenarios
   # =========================
   @negative
-  Scenario Outline: Invalid login scenarios
+  Scenario Outline: Invalid login scenarios <delimiter> <testCase>
     Given the user provides username "<username>" and password "<password>"
     When the user sends a login request
     Then the response status code should be <statusCode>
     And the error message contains "<message>"
 
     Examples:
-      | testCase         | username | password      | statusCode | message             |
-      | Invalid password | admin    | wrongpassword | 401        | Invalid credentials |
-      | Invalid username | wrong    | password      | 401        | Invalid credentials |
-      | Empty username   |          | password      | 401        | Invalid credentials |
-      | Empty password   | admin    |               | 401        | Invalid credentials |
+      | testCase         |  | username | password      | statusCode | message             | delimiter |
+      | Invalid password |  | admin    | wrongpassword | 401        | Invalid credentials | -		  |
+      | Invalid username |  | wrong    | password      | 401        | Invalid credentials | -		  |
+      | Empty username   |  |          | password      | 401        | Invalid credentials | -		  |
+      | Empty password   |  | admin    |               | 401        | Invalid credentials | -		  |
 
   @negative
   Scenario: Login with invalid HTTP method

@@ -13,9 +13,9 @@ public class AuthSteps {
     private final TestContext testContext;
     private final AuthService authService;
 
-    public AuthSteps(TestContext testContext) {
+    public AuthSteps(TestContext testContext, AuthService authService) {
         this.testContext = testContext;
-        this.authService = new AuthService();
+        this.authService = authService;
     }
 
     @Given("the user has valid admin credentials")

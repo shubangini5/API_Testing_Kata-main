@@ -9,9 +9,9 @@ public class DeleteSteps {
     private final TestContext testContext;
     private final BookingService bookingService;
 
-    public DeleteSteps(TestContext testContext) {
+    public DeleteSteps(TestContext testContext, BookingService bookingService) {
         this.testContext = testContext;
-        this.bookingService = new BookingService();
+        this.bookingService = bookingService;
     }
 
     @When("the user deletes the booking")

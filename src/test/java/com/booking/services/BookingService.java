@@ -9,8 +9,8 @@ public class BookingService {
 
     private final ApiClient apiClient;
 
-    public BookingService() {
-        this.apiClient = new ApiClient();
+    public BookingService(ApiClient apiClient) {
+        this.apiClient = apiClient;
     }
 
     public Response createBooking(BookingRequest request) {

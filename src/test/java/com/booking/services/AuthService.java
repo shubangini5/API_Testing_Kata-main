@@ -9,8 +9,8 @@ public class AuthService {
 
     private final ApiClient apiClient;
 
-    public AuthService() {
-        this.apiClient = new ApiClient();
+    public AuthService(ApiClient apiClient) {
+        this.apiClient = apiClient;
     }
 
     public Response login(AuthRequest authRequest) {

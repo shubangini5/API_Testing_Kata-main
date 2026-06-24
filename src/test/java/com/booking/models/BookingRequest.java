@@ -1,7 +1,5 @@
 package com.booking.models;
 
-import java.util.Locale;
-
 public class BookingRequest {
 
     private Integer roomid;

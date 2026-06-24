@@ -5,9 +5,6 @@ public class BookingResponse {
     private Integer bookingid;
     private BookingRequest booking;
 
-    public BookingResponse() {
-    }
-
     public Integer getBookingid() {
         return bookingid;
     }
