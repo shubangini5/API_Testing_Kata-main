@@ -25,3 +25,9 @@ Feature: Hotel booking login
       | Invalid username | wrong    | password      | 401        | Invalid credentials |
       | Empty username   |          | password      | 401        | Invalid credentials |
       | Empty password   | admin    |               | 401        | Invalid credentials |
+
+  @negative
+  Scenario: Login with invalid HTTP method
+    When the user sends a GET request to the login endpoint
+    Then the response status code should be 405
+    And the response body should be empty

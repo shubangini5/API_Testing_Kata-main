@@ -8,6 +8,14 @@ public class ApiClient {
 
     public Response post(String endpoint, Object requestBody) {
 
+        if (requestBody == null) {
+            return RestAssured
+                    .given()
+                    .contentType(ContentType.JSON)
+                    .when()
+                    .post(endpoint);
+        }
+
         return RestAssured
                 .given()
                 .contentType(ContentType.JSON)
@@ -21,6 +29,24 @@ public class ApiClient {
         return RestAssured
                 .given()
                 .contentType(ContentType.JSON)
+                .when()
+                .get(endpoint);
+    }
+
+    public Response get(String endpoint, String token) {
+
+        if (token == null || token.trim().isEmpty()) {
+            return RestAssured
+                    .given()
+                    .contentType(ContentType.JSON)
+                    .when()
+                    .get(endpoint);
+        }
+
+        return RestAssured
+                .given()
+                .contentType(ContentType.JSON)
+                .cookie("token", token)
                 .when()
                 .get(endpoint);
     }
@@ -47,6 +73,15 @@ public class ApiClient {
                 .contentType(ContentType.JSON)
                 .cookie("token", token)
                 .body(requestBody)
+                .when()
+                .patch(endpoint);
+    }
+
+    public Response patch(String endpoint) {
+
+        return RestAssured
+                .given()
+                .contentType(ContentType.JSON)
                 .when()
                 .patch(endpoint);
     }

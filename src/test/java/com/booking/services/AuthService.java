@@ -13,10 +13,18 @@ public class AuthService {
         this.apiClient = new ApiClient();
     }
 
-    public Response login(AuthRequest request) {
+    public Response login(AuthRequest authRequest) {
+
         return apiClient.post(
                 Endpoints.AUTH_LOGIN,
-                request
+                authRequest
+        );
+    }
+
+    public Response loginUsingGet() {
+
+        return apiClient.get(
+                Endpoints.AUTH_LOGIN
         );
     }
 }
