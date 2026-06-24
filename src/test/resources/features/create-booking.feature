@@ -6,6 +6,9 @@ Feature: Create Booking
   I want to create bookings with valid and invalid data
   So that booking creation and validations can be verified
 
+  Background:
+    Given the user is authenticated
+
   # =========================
   # Positive Scenarios
   # =========================

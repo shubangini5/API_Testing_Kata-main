@@ -41,9 +41,9 @@ Feature: Retrieve Booking
     And the error message contains "<message>"
 
     Examples:
-      | description                   | action       | bookingId | statusCode | message       |
-      | Non-existing booking          | retrieve     | 999999    | 404        |               |
-      | Invalid booking ID            | retrieve     | -1        | 404        | Not Found     |
-      | Missing authentication cookie | noToken      | 1         | 403        | Unauthorized  |
-      | Invalid authentication cookie | invalidToken | 1         | 403        | invalid token |
+      | description                   | action       | bookingId | statusCode | message   |
+      | Non-existing booking          | retrieve     | 999999    | 404        |           |
+      | Invalid booking ID            | retrieve     | -1        | 404        | Not Found |
+      | Missing authentication cookie | noToken      | 1         | 403        |           |
+      | Invalid authentication cookie | invalidToken | 1         | 403        |           |
 

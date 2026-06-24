@@ -9,6 +9,10 @@ Feature: Delete Booking
   Background:
     Given the user is authenticated
 
+  # =========================
+  # Positive Scenarios
+  # =========================
+
   @delete @positive @smoke
   Scenario: Delete booking - Existing booking
 
@@ -19,8 +23,11 @@ Feature: Delete Booking
     Then the booking should be created successfully
 
     When the user deletes the booking
-
     Then the response status code should be 202
+
+  # =========================
+  # Negative Scenarios
+  # =========================
 
   @delete @negative
   Scenario: Delete booking failure - Already deleted booking
@@ -32,11 +39,9 @@ Feature: Delete Booking
     Then the booking should be created successfully
 
     When the user deletes the booking
-
     Then the response status code should be 202
 
     When the user attempts to delete the booking again
-
     Then the response status code should be 404
 
   @delete @negative

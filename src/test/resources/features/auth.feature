@@ -5,6 +5,10 @@ Feature: Hotel booking login
   As a guest or hotel manager
   I want to log in using valid credentials
 
+  # =========================
+  # Positive Scenarios
+  # =========================
+
   @positive @smoke
   Scenario: Login successfully with valid credentials
     Given the user has valid admin credentials
@@ -12,6 +16,9 @@ Feature: Hotel booking login
     Then the response status code should be 200
     And the response contains an authentication token
 
+  # =========================
+  # Negative Scenarios
+  # =========================
   @negative
   Scenario Outline: Invalid login scenarios
     Given the user provides username "<username>" and password "<password>"

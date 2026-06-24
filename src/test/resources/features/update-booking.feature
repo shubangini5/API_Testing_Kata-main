@@ -9,20 +9,28 @@ Feature: Update Booking
   Background:
     Given the user is authenticated
 
+  # =========================
+  # Positive Scenarios
+  # =========================
+
   @update @positive @smoke
   Scenario: Update booking - Successful update
 
     When the user creates a booking with:
       | roomid | firstname | lastname | depositpaid | checkin    | checkout   | email         | phone        |
-      | 2      | Johny     | David    | true        | 2027-06-01 | 2027-06-02 | john@test.com | 329876543210 |
+      | 2      | Sam       | Max      | true        | 2027-06-11 | 2027-06-12 | john@test.com | 329876543210 |
 
     Then the booking should be created successfully
 
     When the user updates the booking with:
       | roomid | firstname | lastname | depositpaid | checkin    | checkout   | email         | phone        |
-      | 2      | Jam       | Martin   | false       | 2027-06-03 | 2027-06-04 | jane@test.com | 329876543211 |
+      | 2      | Jam       | Martin   | false       | 2027-06-23 | 2027-06-24 | jane@test.com | 329876543211 |
 
     Then the response status code should be 200
+
+  # =========================
+  # Negative Scenarios
+  # =========================
 
   @update @negative
   Scenario Outline: Update booking failures - <description>
