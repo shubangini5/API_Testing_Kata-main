@@ -8,8 +8,8 @@ public class Hooks {
 
     @Before
     public void setup() {
-        RestAssured.baseURI =
-                ConfigReader.getProperty("base.url");
+//        RestAssured.baseURI =
+//                ConfigReader.getProperty("base.url");
 
         RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
     }

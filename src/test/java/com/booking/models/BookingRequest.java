@@ -1,5 +1,7 @@
 package com.booking.models;
 
+import java.util.Locale;
+
 public class BookingRequest {
 
     private Integer roomid;
@@ -9,6 +11,62 @@ public class BookingRequest {
     private BookingDates bookingdates;
     private String email;
     private String phone;
+
+    private BookingRequest() {
+
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static class Builder {
+        private final BookingRequest request;
+
+        private Builder() {
+            this.request = new BookingRequest();
+        }
+
+        public Builder roomid(Integer roomid) {
+            request.roomid = roomid;
+            return this;
+        }
+
+        public Builder firstname(String firstname) {
+            request.firstname = firstname;
+            return this;
+        }
+
+        public Builder lastname(String lastname) {
+            request.lastname = lastname;
+            return this;
+        }
+
+        public Builder depositpaid(Boolean depositpaid) {
+            request.depositpaid = depositpaid;
+            return this;
+        }
+
+        public Builder bookingdates(BookingDates bookingdates) {
+            request.bookingdates = bookingdates;
+            return this;
+        }
+
+        public Builder email(String email) {
+            request.email = email;
+            return this;
+        }
+
+        public Builder phone(String phone) {
+            request.phone = phone;
+            return this;
+        }
+
+        public BookingRequest build() {
+            return request;
+        }
+    }
+
 
     public Integer getRoomid() {
         return roomid;

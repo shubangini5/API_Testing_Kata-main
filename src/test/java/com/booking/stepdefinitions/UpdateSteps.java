@@ -3,6 +3,7 @@ package com.booking.stepdefinitions;
 import com.booking.models.BookingDates;
 import com.booking.models.BookingRequest;
 import com.booking.services.BookingService;
+import com.booking.utils.DataMapper;
 import com.booking.utils.TestContext;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.When;
@@ -23,7 +24,7 @@ public class UpdateSteps {
     @When("the user updates the booking with:")
     public void theUserUpdatesTheBookingWith(DataTable dataTable) {
 
-        BookingRequest request = mapBookingRequest(dataTable);
+        BookingRequest request = DataMapper.mapToBookingRequest(dataTable);
 
         Response response = bookingService.updateBooking(
                 testContext.getBookingId(),
@@ -39,7 +40,7 @@ public class UpdateSteps {
                                                    String bookingId,
                                                    DataTable dataTable) {
 
-        BookingRequest request = mapBookingRequest(dataTable);
+        BookingRequest request = DataMapper.mapToBookingRequest(dataTable);
 
         String token;
 
@@ -68,26 +69,26 @@ public class UpdateSteps {
 
         testContext.setResponse(response);
     }
-
-    private BookingRequest mapBookingRequest(DataTable dataTable) {
-
-        Map<String, String> row =
-                dataTable.asMaps(String.class, String.class).get(0);
-
-        BookingRequest request = new BookingRequest();
-
-        request.setRoomid(Integer.parseInt(row.get("roomid")));
-        request.setFirstname(row.get("firstname"));
-        request.setLastname(row.get("lastname"));
-        request.setDepositpaid(Boolean.parseBoolean(row.get("depositpaid")));
-        request.setEmail(row.get("email"));
-        request.setPhone(row.get("phone"));
-
-        BookingDates bookingDates =
-                new BookingDates(row.get("checkin"), row.get("checkout"));
-
-        request.setBookingdates(bookingDates);
-
-        return request;
-    }
+//
+//    private BookingRequest mapBookingRequest(DataTable dataTable) {
+//
+//        Map<String, String> row =
+//                dataTable.asMaps(String.class, String.class).get(0);
+//
+//        BookingRequest request = new BookingRequest();
+//
+//        request.setRoomid(Integer.parseInt(row.get("roomid")));
+//        request.setFirstname(row.get("firstname"));
+//        request.setLastname(row.get("lastname"));
+//        request.setDepositpaid(Boolean.parseBoolean(row.get("depositpaid")));
+//        request.setEmail(row.get("email"));
+//        request.setPhone(row.get("phone"));
+//
+//        BookingDates bookingDates =
+//                new BookingDates(row.get("checkin"), row.get("checkout"));
+//
+//        request.setBookingdates(bookingDates);
+//
+//        return request;
+//    }
 }
