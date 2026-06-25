@@ -88,6 +88,5 @@ public class CommonSteps {
         }
 
         testContext.setBookingId(bookingId);
-        //testContext.setBookingId(response.jsonPath().getInt("bookingid"));
     }
 }

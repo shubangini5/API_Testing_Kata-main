@@ -47,22 +47,22 @@ src
 ## 🔍 APIs Covered
 
 - **Login Auth**  
-  `POST /auth/login
+  `POST /auth/login`
 
 - **Create Booking**  
-  `POST /booking
+  `POST /booking`
 
 - **Booking Details**  
-  `GET /booking{id}
+  `GET /booking{id}`
 
 - **Modify Booking**  
-  `PUT /booking{id}
+  `PUT /booking{id}`
 
 - **Cancel Booking**  
-  `DELETE /booking{id}
+  `DELETE /booking{id}`
 
 - **Patch Booking**  
-  `PATCH /booking{id}
+  `PATCH /booking{id}`
 
 
 ## 📊 Features Tested

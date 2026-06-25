@@ -25,10 +25,6 @@ public class BookingResponse {
         return bookingid;
     }
 
-    public void setBookingid(Integer roomid) {
-        this.bookingid = bookingid;
-    }
-
     public String getFirstname() {
         return firstname;
     }
