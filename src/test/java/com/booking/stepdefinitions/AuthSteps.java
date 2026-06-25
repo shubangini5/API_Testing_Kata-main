@@ -18,7 +18,7 @@ public class AuthSteps {
         this.authService = authService;
     }
 
-    @Given("the user has valid admin credentials")
+    @Given("the user has valid credentials")
     public void theUserHasValidAdminCredentials() {
 
         AuthRequest request = new AuthRequest(
@@ -29,7 +29,7 @@ public class AuthSteps {
         testContext.setAuthRequest(request);
     }
 
-    @Given("the user provides username {string} and password {string}")
+    @Given("the user has credentials with username {string} and password {string}")
     public void theUserProvidesUsernameAndPassword(String username,
                                                    String password) {
 
@@ -39,7 +39,7 @@ public class AuthSteps {
         testContext.setAuthRequest(request);
     }
 
-    @When("the user sends a login request")
+    @When("the user logs in")
     public void theUserSendsALoginRequest() {
 
         testContext.setResponse(
@@ -49,7 +49,7 @@ public class AuthSteps {
         );
     }
 
-    @When("the user sends a GET request to the login endpoint")
+    @When("the user attempts to authenticate using an unsupported request method")
     public void theUserSendsAGetRequestToTheLoginEndpoint() {
 
         testContext.setResponse(
@@ -78,18 +78,28 @@ public class AuthSteps {
         testContext.setToken(token);
     }
 
-    @Then("the error message contains {string}")
-    public void theErrorMessageContains(String expectedMessage) {
 
-        String actualResponse =
-                testContext.getResponse()
-                        .asString();
+    @Then("the user should be authenticated")
+    public void verifySuccessAuthentication() {
 
-        assertTrue(
-                actualResponse.contains(expectedMessage),
-                "Expected: " + expectedMessage +
-                        " but actual response was: " + actualResponse
+        assertEquals(
+                200,
+                testContext.getResponse().statusCode()
         );
     }
+
+    @Then("the authentication should fail")
+    public void verifyFailureAuthentication() {
+
+        assertEquals(
+                401,
+                testContext.getResponse().statusCode()
+        );
+    }
+
+
+
+
+
 
 }

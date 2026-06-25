@@ -2,22 +2,76 @@ package com.booking.models;
 
 public class BookingResponse {
 
+    private Integer roomid;
+    private String firstname;
+    private String lastname;
+    private Boolean depositpaid;
+    private BookingDates bookingdates;
+    private String email;
+    private String phone;
     private Integer bookingid;
-    private BookingRequest booking;
+
+    public Integer getRoomid() {
+        return roomid;
+    }
+
+    public void setRoomid(Integer roomid) {
+        this.roomid = roomid;
+    }
 
     public Integer getBookingid() {
         return bookingid;
     }
 
-    public void setBookingid(Integer bookingid) {
+    public void setBookingid(Integer roomid) {
         this.bookingid = bookingid;
     }
 
-    public BookingRequest getBooking() {
-        return booking;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setBooking(BookingRequest booking) {
-        this.booking = booking;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    public Boolean getDepositpaid() {
+        return depositpaid;
+    }
+
+    public void setDepositpaid(Boolean depositpaid) {
+        this.depositpaid = depositpaid;
+    }
+
+    public BookingDates getBookingdates() {
+        return bookingdates;
+    }
+
+    public void setBookingdates(BookingDates bookingdates) {
+        this.bookingdates = bookingdates;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }

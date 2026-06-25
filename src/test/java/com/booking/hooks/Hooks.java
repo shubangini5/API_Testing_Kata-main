@@ -10,13 +10,8 @@ public class Hooks {
     @Before
     public void setup() {
 
-        String threadName = Thread.currentThread().getName();
-        String threadId = String.valueOf(Thread.currentThread().getId());
-
-///        logger.info("═══════════════════════════════════════════════════════");
-        logger.info("TEST EXECUTING ON THREAD: " + threadName);
-        logger.info("THREAD ID: " + threadId);
-///        logger.info("═══════════════════════════════════════════════════════");
+        String threadId = Thread.currentThread().toString();
+        logger.info("TEST EXECUTING ON THREAD: " + threadId);
 
         RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
     }

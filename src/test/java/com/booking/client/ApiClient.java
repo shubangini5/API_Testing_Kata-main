@@ -9,9 +9,11 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
+
 public class ApiClient {
 
     private final RequestSpecification baseSpec;
+
 
     public ApiClient(){
         this.baseSpec = new RequestSpecBuilder()

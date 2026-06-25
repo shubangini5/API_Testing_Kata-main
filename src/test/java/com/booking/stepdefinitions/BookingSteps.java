@@ -35,18 +35,16 @@ public class BookingSteps {
     }
 
     @When("the user creates a booking with invalid data:")
-    public void theUserCreatesABookingWithInvalidData(
-            DataTable dataTable) {
-
-        BookingRequest request = DataMapper.mapToBookingRequest(dataTable);
-
-        Response response =
-                bookingService.createBooking(request);
-
-        testContext.setResponse(response);
+    public void theUserCreatesABookingWithInvalidData(DataTable dataTable) {
+        createBooking(dataTable);
     }
 
-    @When("the user sends a PATCH request to the create booking endpoint")
+    @When("the user tries to book the same room again on overlapping days")
+    public void theUserCreatesABookingWithOverlappingDays(DataTable dataTable) {
+        createBooking(dataTable);
+    }
+
+    @When("the user attempts to create a booking using an unsupported request method")
     public void theUserSendsAPatchRequestToTheCreateBookingEndpoint() {
 
         Response response =
@@ -77,7 +75,7 @@ public class BookingSteps {
         testContext.setBookingId(bookingId);
     }
 
-    @Then("the booking id should be generated")
+    @Then("the user should receive a booking ID")
     public void bookingIdShouldBeGenerated() {
 
         Integer bookingId =
@@ -92,4 +90,34 @@ public class BookingSteps {
 
         testContext.setBookingId(bookingId);
     }
+
+    @Then("the booking should not be created")
+    public void verifyBadBooking() {
+        assertErrorStatus();
+    }
+
+    @Then("the booking request should be rejected")
+    public void verifyConflictBooking() {
+        assertErrorStatus();
+    }
+
+    private void assertErrorStatus() {
+        int status = testContext.getResponse().statusCode();
+        assertTrue(
+                status >= 400 && status < 500,
+                "Expected 4xx status but got " + status
+        );
+    }
+
+    private void createBooking(DataTable dataTable) {
+
+        BookingRequest request = DataMapper.mapToBookingRequest(dataTable);
+
+        Response response =
+                bookingService.createBooking(request);
+
+        testContext.setResponse(response);
+    }
+
+
 }

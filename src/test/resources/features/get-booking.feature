@@ -15,35 +15,37 @@ Feature: Retrieve Booking
   @retrieve @positive @smoke
   Scenario: Retrieve existing booking successfully
 
-    When the user creates a booking with:
+    When the user has an existing booking
       | roomid | firstname | lastname | depositpaid | checkin    | checkout   | email         | phone        |
       | 2      | John      | David    | true        | 2027-07-01 | 2027-07-02 | john@test.com | 329876543210 |
-
-    Then the booking should be created successfully
-
-    When the user retrieves the created booking
-
-    Then the booking details should match:
+    Then the user views the booking
+    And the booking details should match:
       | roomid | firstname | lastname | depositpaid | checkin    | checkout   |
       | 2      | John      | David    | true        | 2027-07-01 | 2027-07-02 |
+    And the response matches with json schema "getBookingDetails.json"
 
   # =========================
   # Negative Scenarios
   # =========================
 
   @retrieve @negative
-  Scenario Outline: Retrieve booking failures - <description>
+  Scenario Outline: User attempts to retrieve a booking that does not exist
 
-    When the user performs "<action>" on booking "<bookingId>"
-
-    Then the response status code should be <statusCode>
-
-    And the error message contains "<message>"
+    When the user views the booking ID "<bookingId>"
+    Then the booking should not be found
 
     Examples:
-      | description                   | action       | bookingId | statusCode | message   |
-      | Non-existing booking          | retrieve     | 999999    | 404        |           |
-      | Invalid booking ID            | retrieve     | -1        | 404        | Not Found |
-      | Missing authentication cookie | noToken      | 1         | 403        |           |
-      | Invalid authentication cookie | invalidToken | 1         | 403        |           |
+      | bookingId	|
+      | 999999   	|
+      | -1       	|
+
+  @retrieve @negative
+  Scenario Outline: Unauthenticated user attempts to retrieve a booking <description>
+    When the user retrieves an existing booking ID "<bookingId>" with "<action>" token
+    Then the booking should not be found
+
+    Examples:
+      | description                   | action  | bookingId |
+      | Missing authentication cookie | no      | 1         |
+      | Invalid authentication cookie | invalid | 1         |
 

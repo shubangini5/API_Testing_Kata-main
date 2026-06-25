@@ -2,7 +2,10 @@ package com.booking.stepdefinitions;
 
 import com.booking.services.BookingService;
 import com.booking.utils.TestContext;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 public class DeleteSteps {
 
@@ -16,7 +19,16 @@ public class DeleteSteps {
 
     @When("the user deletes the booking")
     public void theUserDeletesTheBooking() {
+        testContext.setResponse(
+                bookingService.deleteBooking(
+                        testContext.getResponse().jsonPath().getInt("bookingid"),
+                        testContext.getToken()
+                )
+        );
+    }
 
+    @When("the user deletes an already deleted booking")
+    public void theUserDeletesDeletedBooking() {
         testContext.setResponse(
                 bookingService.deleteBooking(
                         testContext.getBookingId(),
@@ -25,7 +37,7 @@ public class DeleteSteps {
         );
     }
 
-    @When("the user attempts to delete the booking again")
+    @When("the user deletes the booking again")
     public void theUserAttemptsToDeleteTheBookingAgain() {
 
         testContext.setResponse(
@@ -36,24 +48,21 @@ public class DeleteSteps {
         );
     }
 
-    @When("the user performs delete {string} on booking {string}")
-    public void theUserPerformsDeleteOnBooking(
-            String action,
-            String bookingId) {
-
+    @When("the user deletes an existing booking ID {string} with {string} token")
+    public void theUserPerformsDeleteOnBooking(String bookingId, String action) {
         String token;
 
         switch (action.toLowerCase()) {
 
-            case "validtoken":
+            case "valid":
                 token = testContext.getToken();
                 break;
 
-            case "notoken":
+            case "no":
                 token = null;
                 break;
 
-            case "invalidtoken":
+            case "invalid":
                 token = "invalid-token";
                 break;
 
@@ -69,4 +78,33 @@ public class DeleteSteps {
                 )
         );
     }
+
+    @Then("the booking should be removed successfully")
+    public void verifyStatusCode() {
+
+        assertEquals(
+                202,
+                testContext.getResponse().statusCode()
+        );
+    }
+
+    @Then("the deletion should fail")
+    public void verifyNotFound() {
+
+        assertEquals(
+                404,
+                testContext.getResponse().statusCode()
+        );
+    }
+
+    @Then("the deletion should be denied")
+    public void denyDeletion() {
+        int status = testContext.getResponse().statusCode();
+
+        assertTrue(
+                status >= 400 && status < 500,
+                "Expected 4xx status but got " + status
+        );
+    }
+
 }

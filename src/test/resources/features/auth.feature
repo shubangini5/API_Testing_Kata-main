@@ -3,38 +3,38 @@ Feature: Hotel booking login
 
   In order to access the hotel booking system
   As a guest or hotel manager
-  I want to log in using valid credentials
+  So that I can manage the bookings
 
   # =========================
   # Positive Scenarios
   # =========================
 
   @positive @smoke
-  Scenario: Login successfully with valid credentials
-    Given the user has valid admin credentials
-    When the user sends a login request
-    Then the response status code should be 200
+  Scenario: User logs in with valid credentials
+    Given the user has valid credentials
+    When the user logs in
+    Then the user should be authenticated
     And the response contains an authentication token
 
   # =========================
   # Negative Scenarios
   # =========================
   @negative
-  Scenario Outline: Invalid login scenarios <delimiter> <testCase>
-    Given the user provides username "<username>" and password "<password>"
-    When the user sends a login request
-    Then the response status code should be <statusCode>
-    And the error message contains "<message>"
+  Scenario Outline: User logs in with invalid credentials <delimiter> <testCase>
+    Given the user has credentials with username "<username>" and password "<password>"
+    When the user logs in
+    Then the authentication should fail
+    And the user should see the error message "<message>"
 
     Examples:
-      | testCase         |  | username | password      | statusCode | message             | delimiter |
-      | Invalid password |  | admin    | wrongpassword | 401        | Invalid credentials | -		  |
-      | Invalid username |  | wrong    | password      | 401        | Invalid credentials | -		  |
-      | Empty username   |  |          | password      | 401        | Invalid credentials | -		  |
-      | Empty password   |  | admin    |               | 401        | Invalid credentials | -		  |
+      | testCase         |username | password      | message             | delimiter |
+      | Invalid password |admin    | wrongpassword | Invalid credentials | -         |
+      | Invalid username |wrong    | password      | Invalid credentials | -         |
+      | Empty username   |         | password      | Invalid credentials | -         |
+      | Empty password   |admin    |               | Invalid credentials | -         |
 
   @negative
-  Scenario: Login with invalid HTTP method
-    When the user sends a GET request to the login endpoint
-    Then the response status code should be 405
-    And the response body should be empty
+  Scenario: User attempts to authenticate using an unsupported operation
+    When the user attempts to authenticate using an unsupported request method
+    Then the authentication request should be rejected
+    And no response should be returned

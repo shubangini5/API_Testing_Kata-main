@@ -1,19 +1,23 @@
 package com.booking.stepdefinitions;
 
 import com.booking.models.AuthRequest;
+import com.booking.models.BookingResponse;
 import com.booking.services.AuthService;
 import com.booking.services.BookingService;
 import com.booking.utils.ConfigReader;
 import com.booking.utils.TestContext;
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.restassured.module.jsv.JsonSchemaValidator;
 
 import java.util.List;
 import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class RetrieveSteps {
 
@@ -32,7 +36,7 @@ public class RetrieveSteps {
         generateAndStoreToken();
     }
 
-    @When("the user retrieves the created booking")
+    @When("the user views the booking")
     public void theUserRetrievesTheCreatedBooking() {
 
         testContext.setResponse(
@@ -43,21 +47,11 @@ public class RetrieveSteps {
         );
     }
 
-    @When("the user performs {string} on booking {string}")
-    public void theUserPerformsActionOnBooking(String action, String bookingId) {
+    @When("the user retrieves an existing booking ID {string} with {string} token")
+    public void theUserPerformsActionOnBooking(String bookingId, String action) {
 
         switch (action.toLowerCase()) {
-
-            case "retrieve":
-                testContext.setResponse(
-                        bookingService.getBooking(
-                                Integer.parseInt(bookingId),
-                                testContext.getToken()
-                        )
-                );
-                break;
-
-            case "notoken":
+            case "no":
                 testContext.setResponse(
                         bookingService.getBooking(
                                 Integer.parseInt(bookingId),
@@ -66,7 +60,7 @@ public class RetrieveSteps {
                 );
                 break;
 
-            case "invalidtoken":
+            case "invalid":
                 testContext.setResponse(
                         bookingService.getBooking(
                                 Integer.parseInt(bookingId),
@@ -78,6 +72,16 @@ public class RetrieveSteps {
             default:
                 throw new IllegalArgumentException("Unsupported action: " + action);
         }
+    }
+
+    @When("the user views the booking ID {string}")
+    public void theUserRetrievesBooking(String bookingId) {
+                testContext.setResponse(
+                        bookingService.getBooking(
+                                Integer.parseInt(bookingId),
+                                testContext.getToken()
+                        )
+                );
     }
 
     @When("the user sends a POST request to the retrieve booking endpoint")
@@ -95,29 +99,33 @@ public class RetrieveSteps {
 
         Map<String, String> row = expected.get(0);
 
+        BookingResponse bookingResponse =
+                testContext.getResponse()
+                        .as(BookingResponse.class);
+
         assertEquals(row.get("roomid"),
-                testContext.getResponse().jsonPath().getString("roomid"));
+                bookingResponse.getRoomid().toString());
 
         assertEquals(row.get("firstname"),
-                testContext.getResponse().jsonPath().getString("firstname"));
+                bookingResponse.getFirstname());
 
         assertEquals(row.get("lastname"),
-                testContext.getResponse().jsonPath().getString("lastname"));
+                bookingResponse.getLastname());
 
         assertEquals(row.get("depositpaid"),
-                testContext.getResponse().jsonPath().getString("depositpaid"));
+                bookingResponse.getDepositpaid().toString());
 
         assertEquals(row.get("email"),
-                testContext.getResponse().jsonPath().getString("email"));
+                bookingResponse.getEmail());
 
         assertEquals(row.get("phone"),
-                testContext.getResponse().jsonPath().getString("phone"));
+                bookingResponse.getPhone());
 
         assertEquals(row.get("checkin"),
-                testContext.getResponse().jsonPath().getString("bookingdates.checkin"));
+                bookingResponse.getBookingdates().getCheckin());
 
         assertEquals(row.get("checkout"),
-                testContext.getResponse().jsonPath().getString("bookingdates.checkout"));
+                bookingResponse.getBookingdates().getCheckout());
     }
 
     private void generateAndStoreToken() {
@@ -134,4 +142,26 @@ public class RetrieveSteps {
 
         testContext.setToken(token);
     }
+
+
+
+    @Then("the booking should not be found")
+    public void denyDeletion() {
+        int status = testContext.getResponse().statusCode();
+        assertTrue(
+                status >= 400 && status < 500,
+                "Expected 4xx status but got " + status
+        );
+    }
+
+    @And("the response matches with json schema {string}")
+    public void theResponseMatchesWithJsonSchema(String schemaFileName) {
+        testContext.getResponse().then()
+                .assertThat()
+                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath
+                        ("jsonSchema/" + schemaFileName));
+    }
+
+
+
 }

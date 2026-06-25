@@ -1,7 +1,7 @@
 @update @booking @hotel-booking-regression
 Feature: Update Booking
 
-  In order to modify reservation details
+  In order to keep my reservation details up to date
   As an authenticated user
   I want to update existing bookings
   So that reservation information can be maintained
@@ -14,50 +14,51 @@ Feature: Update Booking
   # =========================
 
   @update @positive @smoke
-  Scenario: Update booking - Successful update
+  Scenario: User updates an existing booking
+    Given the user has an existing booking
+      | roomid | firstname | lastname | depositpaid | checkin    | checkout   | email        | phone        |
+      | 2      | Sam       | Max      | true        | 2027-06-11 | 2027-06-12 | Sam@test.com | 329876543210 |
+    When the user updates the booking dates:
+      | roomid | firstname | lastname | depositpaid | checkin    | checkout   | email        | phone        |
+      | 2      | Sam       | Max      | true        | 2027-06-28 | 2027-06-29 | Sam@test.com | 329876543210 |
+    Then the booking should be updated successfully
 
-    When the user creates a booking with:
-      | roomid | firstname | lastname | depositpaid | checkin    | checkout   | email         | phone        |
-      | 2      | Sam       | Max      | true        | 2027-06-11 | 2027-06-12 | john@test.com | 329876543210 |
-
-    Then the booking should be created successfully
-
-    When the user updates the booking with:
-      | roomid | firstname | lastname | depositpaid | checkin    | checkout   | email         | phone        |
-      | 2      | Jam       | Martin   | false       | 2027-06-23 | 2027-06-24 | jane@test.com | 329876543211 |
-
-    Then the response status code should be 200
-
+  @update @positive
+  Scenario: User updates the guest information
+    Given the user has an existing booking
+      | roomid | firstname | lastname | depositpaid | checkin    | checkout   | email      | phone        |
+      | 2      | Sam       | Max      | true        | 2027-06-15 | 2027-06-16 | Sam@test.com | 329876543210 |
+    When the user updates the guest information:
+      | roomid | firstname | lastname | depositpaid | checkin    | checkout   | email        | phone        |
+      | 2      | Jam       | Martin   | true        | 2027-06-26 | 2027-06-27 | Jam@test.com | 329876543999 |
+    Then the booking should be updated successfully
   # =========================
   # Negative Scenarios
   # =========================
 
   @update @negative
-  Scenario Outline: Update booking failures - <description>
+  Scenario Outline: User updates a booking with invalid details <description>
 
-    When the user performs update "<action>" on booking "<bookingId>" with:
-      | roomid | firstname | lastname | depositpaid | checkin    | checkout   | email         | phone        |
-      | 2      | Jane      | Smith    | false       | 2027-06-01 | 2027-06-02 | jane@test.com | 329876543211 |
-
-    Then the response status code should be <statusCode>
+    Given the user has an existing booking
+      | roomid | firstname | lastname | depositpaid | checkin    | checkout  | email         | phone        |
+      | 2      | Janet     | Smith    | false       | 2027-02-01 | 2027-02-02 | jane@test.com | 329876543211 |
+    When the user provides invalid details:
+      | roomid   | firstname   | lastname   | depositpaid   | checkin   | checkout   | email   | phone   |
+      | <roomid> | <firstname> | <lastname> | <depositpaid> | <checkin> | <checkout> | <email> | <phone> |
+    Then the update should fail
 
     Examples:
-      | description                   | action       | bookingId | statusCode |
-      | Invalid booking ID            | validToken   | -1        | 404        |
-      | Missing authentication cookie | noToken      | 1         | 403        |
-      | Invalid authentication cookie | invalidToken | 1         | 403        |
+      | description       | roomid | firstname | lastname | depositpaid | checkin    | checkout   | email         | phone        | statusCode | message                            |
+      | (Invalid room id) | -1     | Johney    | David    | true        | 2027-03-01 | 2027-03-02 | john@test.com | 329876543210 | 400        | must be greater than or equal to 1 |
+
 
   @update @negative
-  Scenario: Update booking failures - Overlapping dates
-
-    When the user creates a booking with:
-      | roomid | firstname | lastname | depositpaid | checkin    | checkout   | email         | phone        |
-      | 2      | John      | David    | true        | 2027-06-10 | 2027-06-12 | john@test.com | 329876543210 |
-
-    Then the booking should be created successfully
-
-    When the user updates the booking with:
-      | roomid | firstname | lastname | depositpaid | checkin    | checkout   | email         | phone        |
-      | 2      | Jane      | Smith    | false       | 2027-06-11 | 2027-06-13 | jane@test.com | 329876543211 |
-
-    Then the response status code should be 409
+  Scenario Outline: Unauthenticated user attempts to update a booking <description>
+    When the user updates an existing booking ID "<bookingId>" with "<action>" token
+      | roomid   | firstname   | lastname   | depositpaid   | checkin   | checkout   | email   | phone   |
+      | <roomid> | <firstname> | <lastname> | <depositpaid> | <checkin> | <checkout> | <email> | <phone> |
+    Then the update should be denied
+    Examples:
+      | description                   | action  | bookingId | roomid | firstname | lastname | depositpaid | checkin    | checkout   | email        | phone        |
+      | Missing authentication cookie | no      | 1         | 2      | Jam       | Martin   | true        | 2027-06-26 | 2027-06-27 | Jam@test.com | 329876543999 |
+      | Invalid authentication cookie | invalid | 1         | 2      | Jam       | Martin   | true        | 2027-06-26 | 2027-06-27 | Jam@test.com | 329876543999 |
