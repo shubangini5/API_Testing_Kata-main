@@ -15,14 +15,15 @@ This project demonstrates API testing best practices using the [Hotel Booking AP
 
 ## 🛠 Tech Stack
 
-- **Java 17**
+- **Java 17** - Programming language
 - **REST Assured 5.x** - API testing library
 - **Cucumber 7.x** - BDD framework
-- **JUnit 5** - Testing framework
-- **Maven** - Build tool
+- **JUnit 5** - Test execution framework
+- **Maven** - Build and dependency management tool
 
 
 ## 📁 Project Structure
+
 ```
 src
 ├── test
@@ -73,28 +74,28 @@ src
 - ✅ Update booking
 - ✅ Partial update booking
 - ✅ Delete booking
-- ✅ End-2-End user journey
+- ✅ End-2-End booking journey
 
-## 🔍 Covered Scenarios
+## 🔍 Scenarios covered
 
 - User logs in successfully with valid credentials
 - User attempts login with different invalid credentials
 - User attempts authentication using an unsupported operation
-- Successful hotel room booking creation
-- Create a booking with invalid field values
-- Create a booking when checkout date is earlier than check-in date
-- Create bookings for different guest users
-- Retrieve booking details using a valid booking ID
-- Retrieve booking details using an invalid booking ID
-- Attempt to retrieve a non-existing booking
-- Update an existing booking successfully
-- Update booking details with invalid data
-- Partially update selected booking details
-- Cancel an existing booking successfully
-- Cancel a booking using an invalid booking ID
-- Attempt booking operations using unsupported HTTP methods
-- Validate GET booking response against JSON schema
-- Successful end-to-end booking creation, retrieval, update, and cancellation
+- User creates a hotel room booking successfully
+- User creates a booking with invalid field values
+- User creates a booking when checkout date is earlier than check-in date
+- User creates bookings for different guest users
+- User retrieves booking details using a valid booking ID
+- User retrieves booking details using an invalid booking ID
+- User attempts to retrieve a non-existing booking
+- User updates an existing booking successfully
+- User updates booking details with invalid data
+- User partially updates selected booking details
+- User cancels an existing booking successfully
+- User cancels a booking using an invalid booking ID
+- User attempts booking operations using unsupported HTTP methods
+- User validates GET booking response against JSON schema
+- User completes end-to-end booking flow successfully: creation, retrieval, update and cancellation
 
 ## 📋 Prerequisites
 
@@ -105,17 +106,20 @@ src
 ## 🚀 Quick Start
 
 ### 1. Clone Repository
+
 ```bash
 git clone <repository-url>
 cd API_Testing_Kata
 ```
 
 ### 2. Install Dependencies
+
 ```bash
 mvn clean install
 ```
 
 ### 3. Configuration
+
 Edit `src/test/resources/config.properties` to customize:
 - API base URL
 - Authentication credentials
@@ -130,6 +134,7 @@ Edit `src/test/resources/extent.properties` to customize:
 - Execution metadata
 
 ### 4. Run Tests
+
 ```bash
 # Run all tests
 mvn clean test
@@ -141,13 +146,14 @@ mvn test -Dcucumber.features="src/test/resources/features/auth.feature"
 mvn test -Dcucumber.filter.tags="@smoke"
 ```
 
-## 📈 Test Reports
+## 📈 View Reports
 
 After running tests, view reports:
 - **ExtentReport:** `target/extend-reports d-MMM-YY HH-mm-ss/ExtentReport.html`
 - **Cucumber Report:** `target/cucumber-reports/cucumber.html`
 
 ### Extent Report Dashboard
+
 ![ExtentDashboard.png](report/ExtentDashboard.png)
 
 ## 🔗 API Specification
@@ -157,6 +163,7 @@ After running tests, view reports:
 ## 📝 Running Tests in IDE
 
 ### IntelliJ IDEA
+
 * Right-click on feature file → "Run Feature"
 * Right-click on TestRunner.java → "Run"
 * Right-click on a Scenario or Tag → "Run"
@@ -164,16 +171,19 @@ After running tests, view reports:
 ## 🐛 Troubleshooting
 
 **Tests not connecting to API?**
+
 - Check internet connection
 - Verify `base.url` in config.properties
 - Ensure API is accessible: https://automationintesting.online
 
 **Maven dependencies failing?**
+
 ```bash
 mvn clean dependency:purge-local-repository install
 ```
 
 **Java version not compatible?**
+
 ```bash
 # Check version
 java -version
