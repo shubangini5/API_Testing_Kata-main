@@ -92,5 +92,7 @@ Feature: Create Booking
   @create @negative
   Scenario: User attempts to create a booking using an unsupported operation
     When the user attempts to create a booking using an unsupported request method
+      | roomid | firstname | lastname | depositpaid | checkin    | checkout   | email           | phone        |
+      | 2      | Parker    | Peter    | true        | 2027-01-21 | 2027-01-22 | parker@test.com | 329876543211 |
     Then the booking request should be rejected
     And no response should be returned

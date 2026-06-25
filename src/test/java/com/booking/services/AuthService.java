@@ -5,6 +5,7 @@ import com.booking.constants.Endpoints;
 import com.booking.models.AuthRequest;
 import io.restassured.response.Response;
 
+// Service layer responsible for authentication operations.
 public class AuthService {
 
     private final ApiClient apiClient;

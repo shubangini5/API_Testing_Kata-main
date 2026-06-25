@@ -1,5 +1,6 @@
 package com.booking.models;
 
+// Request model representing authentication credentials.
 public class AuthRequest {
 
     private String username;

@@ -4,15 +4,16 @@ import com.booking.services.BookingService;
 import com.booking.utils.TestContext;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+
 import static org.junit.jupiter.api.Assertions.*;
 
-
-public class DeleteSteps {
+// Step definitions for delete booking scenarios.
+public class DeleteBookingSteps {
 
     private final TestContext testContext;
     private final BookingService bookingService;
 
-    public DeleteSteps(TestContext testContext, BookingService bookingService) {
+    public DeleteBookingSteps(TestContext testContext, BookingService bookingService) {
         this.testContext = testContext;
         this.bookingService = bookingService;
     }
@@ -48,8 +49,17 @@ public class DeleteSteps {
         );
     }
 
+    @When("the user deletes the booking with ID {string}")
+    public void theUserPerformsDeleteOnInvalidBooking(String bookingId) {
+        theUserPerformsDeleteOnBooking(bookingId, "valid");
+    }
+
     @When("the user deletes an existing booking ID {string} with {string} token")
-    public void theUserPerformsDeleteOnBooking(String bookingId, String action) {
+    public void theUserPerformsDeleteOnBookingWithAction(String bookingId, String action) {
+        theUserPerformsDeleteOnBooking(bookingId, action);
+    }
+
+    private void theUserPerformsDeleteOnBooking(String bookingId, String action) {
         String token;
 
         switch (action.toLowerCase()) {
@@ -71,6 +81,7 @@ public class DeleteSteps {
                         "Unsupported action: " + action);
         }
 
+        System.out.println("bookingId "+bookingId);
         testContext.setResponse(
                 bookingService.deleteBooking(
                         Integer.parseInt(bookingId),

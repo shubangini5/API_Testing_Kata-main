@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
+// Utility class for reading framework configuration
+// values from the properties file.
 public class ConfigReader {
 
     private static final Properties properties = new Properties();

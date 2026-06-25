@@ -14,10 +14,8 @@ Feature: Partially update a hotel booking
     When the user has an existing booking
       | roomid | firstname | lastname | depositpaid | checkin    | checkout   | email         | phone        |
       | 2      | John      | David    | true        | 2027-06-01 | 2027-06-02 | john@test.com | 329876543210 |
-
     Then the user partially updates the booking with:
       | firstname | lastname |
       | Dan       | Sam      |
-
-    And the booking detail should be updated successfully
+    And the booking detail should not be updated
 

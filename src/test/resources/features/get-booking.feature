@@ -13,7 +13,7 @@ Feature: Retrieve Booking
   # =========================
 
   @retrieve @positive @smoke
-  Scenario: Retrieve existing booking successfully
+  Scenario: User retrieve existing booking successfully
 
     When the user has an existing booking
       | roomid | firstname | lastname | depositpaid | checkin    | checkout   | email         | phone        |

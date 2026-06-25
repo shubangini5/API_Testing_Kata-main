@@ -1,5 +1,7 @@
 package com.booking.models;
 
+// Model representing the booking check-in
+// and check-out dates.
 public class BookingDates {
 
     private String checkin;

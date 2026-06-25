@@ -46,6 +46,13 @@ Feature: Delete Booking
       | description                   | action  | bookingId | statusCode |
       | Missing authentication cookie | no      | 1         | 403        |
       | Invalid authentication cookie | invalid | 1         | 403        |
-      | Non-existing booking          | valid   | 999999    | 404        |
-      | Invalid booking ID            | valid   | -1        | 404        |
 
+  @delete @negative
+  Scenario Outline: User attempts to delete a invalid booking <description>
+    When the user deletes the booking with ID "<bookingId>"
+    Then the deletion should be denied
+
+    Examples:
+      | description                   | bookingId	|
+      | Non-existing booking          | 999999   	|
+      | Invalid booking ID            | -1       	|

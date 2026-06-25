@@ -11,12 +11,13 @@ import io.restassured.response.Response;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class BookingSteps {
+// Step definitions for create booking scenarios.
+public class CreateBookingSteps {
 
     private final TestContext testContext;
     private final BookingService bookingService;
 
-    public BookingSteps(TestContext testContext, BookingService bookingService) {
+    public CreateBookingSteps(TestContext testContext, BookingService bookingService) {
         this.testContext = testContext;
         this.bookingService = bookingService;
     }
@@ -45,10 +46,11 @@ public class BookingSteps {
     }
 
     @When("the user attempts to create a booking using an unsupported request method")
-    public void theUserSendsAPatchRequestToTheCreateBookingEndpoint() {
+    public void theUserSendsAPatchRequestToTheCreateBookingEndpoint(DataTable dataTable) {
 
+        BookingRequest request = DataMapper.mapToBookingRequest(dataTable);
         Response response =
-                bookingService.createBookingUsingPatch();
+                bookingService.createBookingUsingPut(request, testContext.getToken());
 
         testContext.setResponse(response);
     }

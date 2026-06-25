@@ -19,13 +19,14 @@ import java.util.Map;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class RetrieveSteps {
+// Step definitions for retrieve booking scenarios.
+public class GetBookingSteps {
 
     private final TestContext testContext;
     private final BookingService bookingService;
     private final AuthService authService;
 
-    public RetrieveSteps(TestContext testContext, BookingService bookingService, AuthService authService) {
+    public GetBookingSteps(TestContext testContext, BookingService bookingService, AuthService authService) {
         this.testContext = testContext;
         this.bookingService = bookingService;
         this.authService = authService;
@@ -154,6 +155,7 @@ public class RetrieveSteps {
         );
     }
 
+    // Validates the API contract independently of field values.
     @And("the response matches with json schema {string}")
     public void theResponseMatchesWithJsonSchema(String schemaFileName) {
         testContext.getResponse().then()

@@ -9,7 +9,8 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
-
+// Generic REST client responsible for executing API requests
+// and applying the common request configuration.
 public class ApiClient {
 
     private final RequestSpecification baseSpec;

@@ -8,6 +8,7 @@ import io.cucumber.java.en.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+// Step definitions for authentication scenarios.
 public class AuthSteps {
 
     private final TestContext testContext;

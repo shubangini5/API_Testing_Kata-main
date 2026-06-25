@@ -11,6 +11,7 @@ import io.restassured.response.Response;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+// Common reusable step definitions shared across features.
 public class CommonSteps {
 
     private final TestContext testContext;
@@ -64,6 +65,8 @@ public class CommonSteps {
         );
     }
 
+    // Creates a dedicated booking for the current scenario.
+    // This prevents data sharing during parallel execution.
     @When("the user has an existing booking")
     public void theUserCreatesABookingWith(DataTable dataTable) {
 
@@ -75,6 +78,16 @@ public class CommonSteps {
                 bookingService.createBooking(request);
 
         testContext.setResponse(response);
-        testContext.setBookingId(response.jsonPath().getInt("bookingid"));
+        Integer bookingId = response.jsonPath()
+                .getObject("bookingid", Integer.class);
+
+        if (bookingId == null) {
+            throw new AssertionError(
+                    "Booking ID was not returned in response: " + response.asString()
+            );
+        }
+
+        testContext.setBookingId(bookingId);
+        //testContext.setBookingId(response.jsonPath().getInt("bookingid"));
     }
 }

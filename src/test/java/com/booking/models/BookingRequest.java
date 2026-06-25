@@ -1,5 +1,7 @@
 package com.booking.models;
 
+// Booking request model used for create and update operations.
+// Implements the Builder pattern to simplify test data creation.
 public class BookingRequest {
 
     private Integer roomid;

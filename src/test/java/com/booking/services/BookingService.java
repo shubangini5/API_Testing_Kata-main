@@ -5,6 +5,7 @@ import com.booking.constants.Endpoints;
 import com.booking.models.BookingRequest;
 import io.restassured.response.Response;
 
+// Service layer responsible for booking-related API operations.
 public class BookingService {
 
     private final ApiClient apiClient;
@@ -17,12 +18,13 @@ public class BookingService {
         return apiClient.post(Endpoints.BOOKING, request);
     }
 
-    public Response createBookingUsingGet() {
-        return apiClient.get(Endpoints.BOOKING);
-    }
-
-    public Response createBookingUsingPatch() {
-        return apiClient.patch(Endpoints.BOOKING);
+    public Response createBookingUsingPut(BookingRequest request,
+                                          String token) {
+        return apiClient.put(
+                Endpoints.BOOKING,
+                request,
+                token
+        );
     }
 
     public Response getBooking(Integer bookingId,
@@ -41,6 +43,7 @@ public class BookingService {
                 null
         );
     }
+
     public Response updateBooking(Integer bookingId,
                                   BookingRequest request,
                                   String token) {
@@ -51,6 +54,7 @@ public class BookingService {
                 token
         );
     }
+
     public Response partialUpdateBooking(Integer bookingId,
                                          Object request,
                                          String token) {
@@ -61,6 +65,7 @@ public class BookingService {
                 token
         );
     }
+
     public Response deleteBooking(Integer bookingId,
                                   String token) {
 

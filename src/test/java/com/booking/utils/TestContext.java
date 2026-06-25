@@ -4,8 +4,9 @@ import com.booking.models.AuthRequest;
 import com.booking.models.BookingRequest;
 import io.restassured.response.Response;
 
+// Scenario-scoped context used to share data between step definitions.
+// A separate instance is created for each scenario to support parallel execution.
 public class TestContext {
-
     private AuthRequest authRequest;
     private BookingRequest bookingRequest;
     private Response response;

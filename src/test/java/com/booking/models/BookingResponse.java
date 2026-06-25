@@ -1,5 +1,7 @@
 package com.booking.models;
 
+// Response model representing the booking details
+// returned by the API.
 public class BookingResponse {
 
     private Integer roomid;

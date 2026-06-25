@@ -12,12 +12,13 @@ import io.restassured.response.Response;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class UpdateSteps {
+// Step definitions for update booking scenarios.
+public class UpdateBookingSteps {
 
     private final TestContext testContext;
     private final BookingService bookingService;
 
-    public UpdateSteps(TestContext testContext, BookingService bookingService) {
+    public UpdateBookingSteps(TestContext testContext, BookingService bookingService) {
         this.testContext = testContext;
         this.bookingService = bookingService;
     }
