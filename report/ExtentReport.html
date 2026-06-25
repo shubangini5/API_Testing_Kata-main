@@ -1,0 +1,4808 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title></title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary"></span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Jun 25, 2026 12:55:49 pm</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@create</a><a class="dropdown-item" href="#">@authentication</a><a class="dropdown-item" href="#">@boundary</a><a class="dropdown-item" href="#">@booking</a><a class="dropdown-item" href="#">@delete</a><a class="dropdown-item" href="#">@login</a><a class="dropdown-item" href="#">@crud</a><a class="dropdown-item" href="#">@positive</a><a class="dropdown-item" href="#">@hotel-booking-regression</a><a class="dropdown-item" href="#">@update</a><a class="dropdown-item" href="#">@validation</a><a class="dropdown-item" href="#">@e2e</a><a class="dropdown-item" href="#">@partial-update</a><a class="dropdown-item" href="#">@smoke</a><a class="dropdown-item" href="#">@retrieve</a><a class="dropdown-item" href="#">@negative</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Hotel booking login</p>
+            <p class="text-sm">
+              <span>12:55:50 pm</span> / <span>00:00:02:589</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Hotel booking login</h5>
+<span class='badge badge-success'>06.25.2026 12:55:50 pm</span>
+<span class='badge badge-danger'>06.25.2026 12:55:52 pm</span>
+<span class='badge badge-default'>00:00:02:589</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"> In order to access the hotel booking system
+As a guest or hotel manager
+So that I can manage the bookings</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>User logs in with valid credentials</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.booking.stepdefinitions.AuthSteps.theUserHasValidAdminCredentials()">
+                <span>Given the user has valid credentials</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.AuthSteps.theUserSendsALoginRequest()">
+                <span>When the user logs in</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.AuthSteps.verifySuccessAuthentication()">
+                <span>Then the user should be authenticated</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.AuthSteps.theResponseContainsAnAuthenticationToken()">
+                <span>And the response contains an authentication token</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="8"><span class="badge log pass-bg mr-2">Pass</span>User logs in with invalid credentials <delimiter> <testCase></div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="9"><span class="badge log pass-bg mr-2">Pass</span>User logs in with invalid credentials - Invalid password</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user has credentials with username "admin" and password "wrongpassword"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user logs in</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the authentication should fail</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user should see the error message "Invalid credentials"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="15"><span class="badge log pass-bg mr-2">Pass</span>User logs in with invalid credentials - Invalid username</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user has credentials with username "wrong" and password "password"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user logs in</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the authentication should fail</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user should see the error message "Invalid credentials"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="21"><span class="badge log pass-bg mr-2">Pass</span>User logs in with invalid credentials - Empty username</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user has credentials with username "" and password "password"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user logs in</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the authentication should fail</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user should see the error message "Invalid credentials"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="27"><span class="badge log pass-bg mr-2">Pass</span>User logs in with invalid credentials - Empty password</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user has credentials with username "admin" and password ""</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user logs in</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the authentication should fail</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user should see the error message "Invalid credentials"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="33"><span class="badge log pass-bg mr-2">Pass</span>User attempts to authenticate using an unsupported operation</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.booking.stepdefinitions.AuthSteps.theUserSendsAGetRequestToTheLoginEndpoint()">
+                <span>When the user attempts to authenticate using an unsupported request method</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.CommonSteps.verifyFailureMethod()">
+                <span>Then the authentication request should be rejected</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.CommonSteps.responseBodyShouldBeEmpty()">
+                <span>And no response should be returned</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="38"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Create Booking</p>
+            <p class="text-sm">
+              <span>12:55:52 pm</span> / <span>00:00:05:729</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Create Booking</h5>
+<span class='badge badge-success'>06.25.2026 12:55:52 pm</span>
+<span class='badge badge-danger'>06.25.2026 12:55:58 pm</span>
+<span class='badge badge-default'>00:00:05:729</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=38</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"> In order to reserve hotel rooms
+As a hotel guest
+So that I can stay at the hotel on my selected dates</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="39"><span class="badge log fail-bg mr-2">Fail</span>User creates a booking with valid details</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.booking.stepdefinitions.GetBookingSteps.theUserIsAuthenticated()">
+                <span>Given the user is authenticated</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.CreateBookingSteps.theUserCreatesABookingWith(io.cucumber.datatable.DataTable)">
+                <span>When the user creates a booking with:</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td><td>email</td><td>phone</td></tr><tr><td>1</td><td>John</td><td>David</td><td>true</td><td>2027-01-10</td><td>2027-01-11</td><td>john@test.com</td><td>329876543210</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="com.booking.stepdefinitions.CreateBookingSteps.theBookingShouldBeCreatedSuccessfully()">
+                <span>Then the booking should be created successfully</span>
+      <div>
+        <textarea disabled class="code-block">org.opentest4j.AssertionFailedError: Booking was not created successfully ==> expected: <201> but was: <409>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:563)
+	at com.booking.stepdefinitions.CreateBookingSteps.theBookingShouldBeCreatedSuccessfully(CreateBookingSteps.java:61)
+	at ✽.the booking should be created successfully(classpath:features/create-booking.feature:20)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.booking.stepdefinitions.CreateBookingSteps.bookingIdShouldBeGenerated()">
+                <span>And the user should receive a booking ID</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="45"><span class="badge log fail-bg mr-2">Fail</span>User creates bookings for different guests</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="46"><span class="badge log fail-bg mr-2">Fail</span>User creates bookings for different guests</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given the user is authenticated</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user creates a booking with:</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td><td>email</td><td>phone</td></tr><tr><td>1</td><td>John</td><td>David</td><td>true</td><td>2027-02-01</td><td>2027-02-02</td><td>john@test.com</td><td>329876543210</td></tr></table>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>Then the booking should be created successfully</span>
+      <div>
+        <textarea disabled class="code-block">org.opentest4j.AssertionFailedError: Booking was not created successfully ==> expected: <201> but was: <409>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:563)
+	at com.booking.stepdefinitions.CreateBookingSteps.theBookingShouldBeCreatedSuccessfully(CreateBookingSteps.java:61)
+	at ✽.the booking should be created successfully(classpath:features/create-booking.feature:28)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And the user should receive a booking ID</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="52"><span class="badge log fail-bg mr-2">Fail</span>User creates bookings for different guests</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given the user is authenticated</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user creates a booking with:</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td><td>email</td><td>phone</td></tr><tr><td>2</td><td>Jane</td><td>Smith</td><td>true</td><td>2027-02-03</td><td>2027-02-04</td><td>jane@test.com</td><td>329876543211</td></tr></table>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>Then the booking should be created successfully</span>
+      <div>
+        <textarea disabled class="code-block">org.opentest4j.AssertionFailedError: Booking was not created successfully ==> expected: <201> but was: <409>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:563)
+	at com.booking.stepdefinitions.CreateBookingSteps.theBookingShouldBeCreatedSuccessfully(CreateBookingSteps.java:61)
+	at ✽.the booking should be created successfully(classpath:features/create-booking.feature:28)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And the user should receive a booking ID</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="58"><span class="badge log fail-bg mr-2">Fail</span>User creates bookings for different guests</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given the user is authenticated</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user creates a booking with:</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td><td>email</td><td>phone</td></tr><tr><td>3</td><td>Peter</td><td>Parker</td><td>true</td><td>2027-02-05</td><td>2027-02-06</td><td>peter@test.com</td><td>329876543212</td></tr></table>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>Then the booking should be created successfully</span>
+      <div>
+        <textarea disabled class="code-block">org.opentest4j.AssertionFailedError: Booking was not created successfully ==> expected: <201> but was: <409>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:563)
+	at com.booking.stepdefinitions.CreateBookingSteps.theBookingShouldBeCreatedSuccessfully(CreateBookingSteps.java:61)
+	at ✽.the booking should be created successfully(classpath:features/create-booking.feature:28)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And the user should receive a booking ID</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="64"><span class="badge log fail-bg mr-2">Fail</span>User creates consecutive bookings for the same room</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.booking.stepdefinitions.GetBookingSteps.theUserIsAuthenticated()">
+                <span>Given the user is authenticated</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.CreateBookingSteps.theUserCreatesABookingWith(io.cucumber.datatable.DataTable)">
+                <span>When the user creates a booking with:</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td><td>email</td><td>phone</td></tr><tr><td>1</td><td>John</td><td>David</td><td>true</td><td>2027-02-10</td><td>2027-02-11</td><td>john@test.com</td><td>329876543210</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="com.booking.stepdefinitions.CreateBookingSteps.theBookingShouldBeCreatedSuccessfully()">
+                <span>Then the booking should be created successfully</span>
+      <div>
+        <textarea disabled class="code-block">org.opentest4j.AssertionFailedError: Booking was not created successfully ==> expected: <201> but was: <409>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:563)
+	at com.booking.stepdefinitions.CreateBookingSteps.theBookingShouldBeCreatedSuccessfully(CreateBookingSteps.java:61)
+	at ✽.the booking should be created successfully(classpath:features/create-booking.feature:42)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.booking.stepdefinitions.CreateBookingSteps.bookingIdShouldBeGenerated()">
+                <span>And the user should receive a booking ID</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.booking.stepdefinitions.CreateBookingSteps.theUserCreatesABookingWith(io.cucumber.datatable.DataTable)">
+                <span>When the user creates a booking with:</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td><td>email</td><td>phone</td></tr><tr><td>1</td><td>John</td><td>David</td><td>true</td><td>2027-02-11</td><td>2027-02-12</td><td>john@test.com</td><td>329876543210</td></tr></table>
+      </div>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.booking.stepdefinitions.CreateBookingSteps.theBookingShouldBeCreatedSuccessfully()">
+                <span>Then the booking should be created successfully</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.booking.stepdefinitions.CreateBookingSteps.bookingIdShouldBeGenerated()">
+                <span>And the user should receive a booking ID</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="73"><span class="badge log pass-bg mr-2">Pass</span>User cannot create a booking with invalid details <description></div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="74"><span class="badge log pass-bg mr-2">Pass</span>User cannot create a booking with invalid details (Missing room id)</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user is authenticated</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user creates a booking with invalid data:</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td><td>email</td><td>phone</td></tr><tr><td>[null]</td><td>John</td><td>David</td><td>true</td><td>2027-03-01</td><td>2027-03-02</td><td>john@test.com</td><td>329876543210</td></tr></table>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the booking should not be created</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user should see the error message "Failed to create booking"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="80"><span class="badge log pass-bg mr-2">Pass</span>User cannot create a booking with invalid details (Invalid room id)</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user is authenticated</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user creates a booking with invalid data:</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td><td>email</td><td>phone</td></tr><tr><td>-1</td><td>John</td><td>David</td><td>true</td><td>2027-03-01</td><td>2027-03-02</td><td>john@test.com</td><td>329876543210</td></tr></table>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the booking should not be created</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user should see the error message "must be greater than or equal to 1"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="86"><span class="badge log pass-bg mr-2">Pass</span>User cannot create a booking with invalid details (First name below minimum length)</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user is authenticated</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user creates a booking with invalid data:</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td><td>email</td><td>phone</td></tr><tr><td>1</td><td>Jo</td><td>David</td><td>true</td><td>2027-03-05</td><td>2027-03-06</td><td>john@test.com</td><td>329876543210</td></tr></table>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the booking should not be created</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user should see the error message "size must be between 3 and 18"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="92"><span class="badge log pass-bg mr-2">Pass</span>User cannot create a booking with invalid details First name above maximum length</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user is authenticated</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user creates a booking with invalid data:</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td><td>email</td><td>phone</td></tr><tr><td>1</td><td>ThisNameIsTooLongNow</td><td>David</td><td>true</td><td>2027-03-07</td><td>2027-03-08</td><td>john@test.com</td><td>329876543210</td></tr></table>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the booking should not be created</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user should see the error message "size must be between 3 and 18"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="98"><span class="badge log pass-bg mr-2">Pass</span>User cannot create a booking with invalid details Last name below minimum length</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user is authenticated</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user creates a booking with invalid data:</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td><td>email</td><td>phone</td></tr><tr><td>1</td><td>John</td><td>Da</td><td>true</td><td>2027-03-11</td><td>2027-03-12</td><td>john@test.com</td><td>329876543210</td></tr></table>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the booking should not be created</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user should see the error message "size must be between 3 and 30"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="104"><span class="badge log pass-bg mr-2">Pass</span>User cannot create a booking with invalid details Last name above maximum length</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user is authenticated</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user creates a booking with invalid data:</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td><td>email</td><td>phone</td></tr><tr><td>1</td><td>John</td><td>ThisLastNameIsMoreThanThirtyChars</td><td>true</td><td>2027-03-13</td><td>2027-03-14</td><td>john@test.com</td><td>329876543210</td></tr></table>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the booking should not be created</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user should see the error message "size must be between 3 and 30"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="110"><span class="badge log pass-bg mr-2">Pass</span>User cannot create a booking with invalid details Empty email</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user is authenticated</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user creates a booking with invalid data:</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td><td>email</td><td>phone</td></tr><tr><td>1</td><td>John</td><td>David</td><td>true</td><td>2027-03-15</td><td>2027-03-16</td><td>[empty]</td><td>329876543210</td></tr></table>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the booking should not be created</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user should see the error message "must not be empty"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="116"><span class="badge log pass-bg mr-2">Pass</span>User cannot create a booking with invalid details Invalid email address</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user is authenticated</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user creates a booking with invalid data:</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td><td>email</td><td>phone</td></tr><tr><td>1</td><td>John</td><td>David</td><td>true</td><td>2027-03-17</td><td>2027-03-18</td><td>invalidEmail</td><td>329876543210</td></tr></table>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the booking should not be created</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user should see the error message "must be a well-formed email address"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="122"><span class="badge log pass-bg mr-2">Pass</span>User cannot create a booking with invalid details Empty phone number</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user is authenticated</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user creates a booking with invalid data:</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td><td>email</td><td>phone</td></tr><tr><td>1</td><td>John</td><td>David</td><td>true</td><td>2027-03-19</td><td>2027-03-20</td><td>john@test.com</td><td>[empty]</td></tr></table>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the booking should not be created</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user should see the error message "must not be empty"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="128"><span class="badge log pass-bg mr-2">Pass</span>User cannot create a booking with invalid details Phone below minimum length</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user is authenticated</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user creates a booking with invalid data:</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td><td>email</td><td>phone</td></tr><tr><td>1</td><td>John</td><td>David</td><td>true</td><td>2027-03-21</td><td>2027-03-22</td><td>john@test.com</td><td>123</td></tr></table>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the booking should not be created</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user should see the error message "size must be between 11 and 21"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="134"><span class="badge log pass-bg mr-2">Pass</span>User cannot create a booking with invalid details Phone above maximum length</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user is authenticated</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user creates a booking with invalid data:</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td><td>email</td><td>phone</td></tr><tr><td>1</td><td>John</td><td>David</td><td>true</td><td>2027-03-23</td><td>2027-03-24</td><td>john@test.com</td><td>1234567890123456789012</td></tr></table>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the booking should not be created</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user should see the error message "size must be between 11 and 21"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="140"><span class="badge log pass-bg mr-2">Pass</span>User cannot create a booking with invalid details Checkout before checkin</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user is authenticated</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user creates a booking with invalid data:</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td><td>email</td><td>phone</td></tr><tr><td>1</td><td>John</td><td>David</td><td>true</td><td>2027-03-27</td><td>2027-03-25</td><td>john@test.com</td><td>329876543210</td></tr></table>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the booking should not be created</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user should see the error message "Failed to create booking"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="146"><span class="badge log pass-bg mr-2">Pass</span>User cannot create a booking with invalid details Empty checkin date</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user is authenticated</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user creates a booking with invalid data:</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td><td>email</td><td>phone</td></tr><tr><td>1</td><td>John</td><td>David</td><td>true</td><td>[empty]</td><td>2027-03-28</td><td>john@test.com</td><td>329876543210</td></tr></table>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the booking should not be created</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user should see the error message "must not be null"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="152"><span class="badge log pass-bg mr-2">Pass</span>User cannot create a booking with invalid details Empty checkout date</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user is authenticated</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user creates a booking with invalid data:</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td><td>email</td><td>phone</td></tr><tr><td>1</td><td>John</td><td>David</td><td>true</td><td>2027-03-29</td><td>[empty]</td><td>john@test.com</td><td>329876543210</td></tr></table>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the booking should not be created</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user should see the error message "must not be null"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="158"><span class="badge log pass-bg mr-2">Pass</span>User cannot create an overlapping booking for the same room</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.booking.stepdefinitions.GetBookingSteps.theUserIsAuthenticated()">
+                <span>Given the user is authenticated</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.CreateBookingSteps.theUserCreatesABookingWith(io.cucumber.datatable.DataTable)">
+                <span>When the user creates a booking with:</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td><td>email</td><td>phone</td></tr><tr><td>2</td><td>John</td><td>David</td><td>true</td><td>2027-04-01</td><td>2027-04-03</td><td>john@test.com</td><td>329876543210</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.CreateBookingSteps.theBookingShouldBeCreatedSuccessfully()">
+                <span>Then the booking should be created successfully</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.CreateBookingSteps.bookingIdShouldBeGenerated()">
+                <span>And the user should receive a booking ID</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.CreateBookingSteps.theUserCreatesABookingWithOverlappingDays(io.cucumber.datatable.DataTable)">
+                <span>When the user tries to book the same room again on overlapping days</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td><td>email</td><td>phone</td></tr><tr><td>2</td><td>Peter</td><td>Parker</td><td>true</td><td>2027-04-02</td><td>2027-04-04</td><td>peter@test.com</td><td>329876543211</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.CreateBookingSteps.verifyConflictBooking()">
+                <span>Then the booking request should be rejected</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.CommonSteps.theErrorMessageContains(java.lang.String)">
+                <span>And the user should see the error message "Failed to create booking"</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="167"><span class="badge log pass-bg mr-2">Pass</span>User attempts to create a booking using an unsupported operation</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.booking.stepdefinitions.GetBookingSteps.theUserIsAuthenticated()">
+                <span>Given the user is authenticated</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.CreateBookingSteps.theUserSendsAPatchRequestToTheCreateBookingEndpoint(io.cucumber.datatable.DataTable)">
+                <span>When the user attempts to create a booking using an unsupported request method</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td><td>email</td><td>phone</td></tr><tr><td>2</td><td>Parker</td><td>Peter</td><td>true</td><td>2027-01-21</td><td>2027-01-22</td><td>parker@test.com</td><td>329876543211</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.CreateBookingSteps.verifyConflictBooking()">
+                <span>Then the booking request should be rejected</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.CommonSteps.responseBodyShouldBeEmpty()">
+                <span>And no response should be returned</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="173"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Delete Booking</p>
+            <p class="text-sm">
+              <span>12:55:58 pm</span> / <span>00:00:01:917</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Delete Booking</h5>
+<span class='badge badge-success'>06.25.2026 12:55:58 pm</span>
+<span class='badge badge-danger'>06.25.2026 12:56:00 pm</span>
+<span class='badge badge-default'>00:00:01:917</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=173</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"> In order to cancel a reservation
+As an authenticated user
+I want to delete bookings
+So that I can manage my bookings</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="174"><span class="badge log pass-bg mr-2">Pass</span>User deletes an existing booking</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.booking.stepdefinitions.GetBookingSteps.theUserIsAuthenticated()">
+                <span>Given the user is authenticated</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.CommonSteps.theUserCreatesABookingWith(io.cucumber.datatable.DataTable)">
+                <span>When the user has an existing booking</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td><td>email</td><td>phone</td></tr><tr><td>2</td><td>Patrick</td><td>David</td><td>true</td><td>2028-08-01</td><td>2028-08-02</td><td>patrick@test.com</td><td>329876543210</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.DeleteBookingSteps.theUserDeletesTheBooking()">
+                <span>Then the user deletes the booking</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.DeleteBookingSteps.verifyStatusCode()">
+                <span>And the booking should be removed successfully</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="180"><span class="badge log pass-bg mr-2">Pass</span>User attempts to delete a booking that does not exist</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.booking.stepdefinitions.GetBookingSteps.theUserIsAuthenticated()">
+                <span>Given the user is authenticated</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.CommonSteps.theUserCreatesABookingWith(io.cucumber.datatable.DataTable)">
+                <span>When the user has an existing booking</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td><td>email</td><td>phone</td></tr><tr><td>2</td><td>Patrick</td><td>David</td><td>true</td><td>2028-08-05</td><td>2028-08-06</td><td>patrick@test.com</td><td>329876543210</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.DeleteBookingSteps.theUserDeletesTheBooking()">
+                <span>Then the user deletes the booking</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.DeleteBookingSteps.verifyStatusCode()">
+                <span>And the booking should be removed successfully</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.DeleteBookingSteps.theUserAttemptsToDeleteTheBookingAgain()">
+                <span>Then the user deletes the booking again</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.DeleteBookingSteps.verifyNotFound()">
+                <span>And the deletion should fail</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="188"><span class="badge log pass-bg mr-2">Pass</span>Unauthenticated user attempts to delete a booking <description></div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="189"><span class="badge log pass-bg mr-2">Pass</span>Unauthenticated user attempts to delete a booking Missing authentication cookie</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user is authenticated</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user deletes an existing booking ID "1" with "no" token</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the deletion should be denied</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="194"><span class="badge log pass-bg mr-2">Pass</span>Unauthenticated user attempts to delete a booking Invalid authentication cookie</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user is authenticated</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user deletes an existing booking ID "1" with "invalid" token</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the deletion should be denied</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="199"><span class="badge log pass-bg mr-2">Pass</span>User attempts to delete a invalid booking <description></div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="200"><span class="badge log pass-bg mr-2">Pass</span>User attempts to delete a invalid booking Non-existing booking</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user is authenticated</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user deletes the booking with ID "999999"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the deletion should be denied</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="205"><span class="badge log pass-bg mr-2">Pass</span>User attempts to delete a invalid booking Invalid booking ID</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user is authenticated</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user deletes the booking with ID "-1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the deletion should be denied</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="210"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">End-to-end hotel booking journey</p>
+            <p class="text-sm">
+              <span>12:56:00 pm</span> / <span>00:00:01:022</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">End-to-end hotel booking journey</h5>
+<span class='badge badge-success'>06.25.2026 12:56:00 pm</span>
+<span class='badge badge-danger'>06.25.2026 12:56:01 pm</span>
+<span class='badge badge-default'>00:00:01:022</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=210</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"> In order to manage a hotel reservation
+As an authenticated user
+So that I can create, view, update, and cancel my booking</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="211"><span class="badge log pass-bg mr-2">Pass</span>User completes the full booking journey</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.booking.stepdefinitions.GetBookingSteps.theUserIsAuthenticated()">
+                <span>Given the user is authenticated</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.CreateBookingSteps.theUserCreatesABookingWith(io.cucumber.datatable.DataTable)">
+                <span>When the user creates a booking with:</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td><td>email</td><td>phone</td></tr><tr><td>1</td><td>Peter</td><td>Daemon</td><td>true</td><td>2028-01-10</td><td>2028-01-11</td><td>Peter@test.com</td><td>329876543210</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.CreateBookingSteps.theBookingShouldBeCreatedSuccessfully()">
+                <span>Then the booking should be created successfully</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.CreateBookingSteps.bookingIdShouldBeGenerated()">
+                <span>And the user should receive a booking ID</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.GetBookingSteps.theUserRetrievesTheCreatedBooking()">
+                <span>When the user views the booking</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.GetBookingSteps.theBookingDetailsShouldMatch(io.cucumber.datatable.DataTable)">
+                <span>Then the booking details should match:</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td></tr><tr><td>1</td><td>Peter</td><td>Daemon</td><td>true</td><td>2028-01-10</td><td>2028-01-11</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.UpdateBookingSteps.theUserUpdatesTheBookingDates(io.cucumber.datatable.DataTable)">
+                <span>When the user updates the booking dates:</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td><td>email</td><td>phone</td></tr><tr><td>1</td><td>Peter</td><td>Daemon</td><td>true</td><td>2028-09-03</td><td>2028-09-04</td><td>John@test.com</td><td>329876543210</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.UpdateBookingSteps.verifyStatusCode()">
+                <span>Then the booking should be updated successfully</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.GetBookingSteps.theUserRetrievesTheCreatedBooking()">
+                <span>When the user views the booking</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.GetBookingSteps.theBookingDetailsShouldMatch(io.cucumber.datatable.DataTable)">
+                <span>Then the booking details should match:</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td></tr><tr><td>1</td><td>Peter</td><td>Daemon</td><td>true</td><td>2028-09-03</td><td>2028-09-04</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.DeleteBookingSteps.theUserDeletesTheBooking()">
+                <span>When the user deletes the booking</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.DeleteBookingSteps.verifyStatusCode()">
+                <span>Then the booking should be removed successfully</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.GetBookingSteps.theUserRetrievesTheCreatedBooking()">
+                <span>When the user views the booking</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.GetBookingSteps.denyDeletion()">
+                <span>Then the booking should not be found</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="227"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Retrieve Booking</p>
+            <p class="text-sm">
+              <span>12:56:01 pm</span> / <span>00:00:01:642</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Retrieve Booking</h5>
+<span class='badge badge-success'>06.25.2026 12:56:01 pm</span>
+<span class='badge badge-danger'>06.25.2026 12:56:03 pm</span>
+<span class='badge badge-default'>00:00:01:642</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=227</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"> In order to view reservation details
+As an authenticated user
+I want to retrieve booking information
+So that I can verify existing reservations</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="228"><span class="badge log fail-bg mr-2">Fail</span>User retrieve existing booking successfully</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.booking.stepdefinitions.GetBookingSteps.theUserIsAuthenticated()">
+                <span>Given the user is authenticated</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="com.booking.stepdefinitions.CommonSteps.theUserCreatesABookingWith(io.cucumber.datatable.DataTable)">
+                <span>When the user has an existing booking</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td><td>email</td><td>phone</td></tr><tr><td>2</td><td>John</td><td>David</td><td>true</td><td>2027-07-01</td><td>2027-07-02</td><td>john@test.com</td><td>329876543210</td></tr></table>
+      </div>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: Booking ID was not returned in response: {"error":"Failed to create booking"}
+	at com.booking.stepdefinitions.CommonSteps.theUserCreatesABookingWith(CommonSteps.java:86)
+	at ✽.the user has an existing booking(classpath:features/get-booking.feature:18)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.booking.stepdefinitions.GetBookingSteps.theUserRetrievesTheCreatedBooking()">
+                <span>Then the user views the booking</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.booking.stepdefinitions.GetBookingSteps.theBookingDetailsShouldMatch(io.cucumber.datatable.DataTable)">
+                <span>And the booking details should match:</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td></tr><tr><td>2</td><td>John</td><td>David</td><td>true</td><td>2027-07-01</td><td>2027-07-02</td></tr></table>
+      </div>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.booking.stepdefinitions.GetBookingSteps.theResponseMatchesWithJsonSchema(java.lang.String)">
+                <span>And the response matches with json schema "getBookingDetails.json"</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="235"><span class="badge log pass-bg mr-2">Pass</span>User attempts to retrieve a booking that does not exist</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="236"><span class="badge log pass-bg mr-2">Pass</span>User attempts to retrieve a booking that does not exist</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user is authenticated</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user views the booking ID "999999"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the booking should not be found</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="241"><span class="badge log pass-bg mr-2">Pass</span>User attempts to retrieve a booking that does not exist</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user is authenticated</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user views the booking ID "-1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the booking should not be found</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="246"><span class="badge log pass-bg mr-2">Pass</span>Unauthenticated user attempts to retrieve a booking <description></div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="247"><span class="badge log pass-bg mr-2">Pass</span>Unauthenticated user attempts to retrieve a booking Missing authentication cookie</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user is authenticated</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user retrieves an existing booking ID "1" with "no" token</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the booking should not be found</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="252"><span class="badge log pass-bg mr-2">Pass</span>Unauthenticated user attempts to retrieve a booking Invalid authentication cookie</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user is authenticated</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user retrieves an existing booking ID "1" with "invalid" token</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the booking should not be found</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="257"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Partially update a hotel booking</p>
+            <p class="text-sm">
+              <span>12:56:03 pm</span> / <span>00:00:00:388</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Partially update a hotel booking</h5>
+<span class='badge badge-success'>06.25.2026 12:56:03 pm</span>
+<span class='badge badge-danger'>06.25.2026 12:56:03 pm</span>
+<span class='badge badge-default'>00:00:00:388</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=257</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"> In order to modify selected booking information
+As a user
+So that I can keep my reservation details up to date</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="258"><span class="badge log pass-bg mr-2">Pass</span>Partial update booking not allowed</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.booking.stepdefinitions.GetBookingSteps.theUserIsAuthenticated()">
+                <span>Given the user is authenticated</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.CommonSteps.theUserCreatesABookingWith(io.cucumber.datatable.DataTable)">
+                <span>When the user has an existing booking</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td><td>email</td><td>phone</td></tr><tr><td>2</td><td>John</td><td>David</td><td>true</td><td>2027-06-01</td><td>2027-06-02</td><td>john@test.com</td><td>329876543210</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.PartialUpdateBookingSteps.theUserPartiallyUpdatesTheBookingWith(io.cucumber.datatable.DataTable)">
+                <span>Then the user partially updates the booking with:</span>
+      <div><table class='markup-table table '><tr><td>firstname</td><td>lastname</td></tr><tr><td>Dan</td><td>Sam</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.PartialUpdateBookingSteps.verifyStatusCode()">
+                <span>And the booking detail should not be updated</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="264"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Update Booking</p>
+            <p class="text-sm">
+              <span>12:56:03 pm</span> / <span>00:00:01:626</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Update Booking</h5>
+<span class='badge badge-success'>06.25.2026 12:56:03 pm</span>
+<span class='badge badge-danger'>06.25.2026 12:56:05 pm</span>
+<span class='badge badge-default'>00:00:01:626</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=264</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"> In order to keep my reservation details up to date
+As an authenticated user
+I want to update existing bookings
+So that reservation information can be maintained</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="265"><span class="badge log fail-bg mr-2">Fail</span>User updates an existing booking</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.booking.stepdefinitions.GetBookingSteps.theUserIsAuthenticated()">
+                <span>Given the user is authenticated</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.CommonSteps.theUserCreatesABookingWith(io.cucumber.datatable.DataTable)">
+                <span>Given the user has an existing booking</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td><td>email</td><td>phone</td></tr><tr><td>2</td><td>Sam</td><td>Max</td><td>true</td><td>2027-06-11</td><td>2027-06-12</td><td>Sam@test.com</td><td>329876543210</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.UpdateBookingSteps.theUserUpdatesTheBookingDates(io.cucumber.datatable.DataTable)">
+                <span>When the user updates the booking dates:</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td><td>email</td><td>phone</td></tr><tr><td>2</td><td>Sam</td><td>Max</td><td>true</td><td>2027-06-28</td><td>2027-06-29</td><td>Sam@test.com</td><td>329876543210</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="com.booking.stepdefinitions.UpdateBookingSteps.verifyStatusCode()">
+                <span>Then the booking should be updated successfully</span>
+      <div>
+        <textarea disabled class="code-block">org.opentest4j.AssertionFailedError: expected: <200> but was: <409>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+	at com.booking.stepdefinitions.UpdateBookingSteps.verifyStatusCode(UpdateBookingSteps.java:79)
+	at ✽.the booking should be updated successfully(classpath:features/update-booking.feature:24)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="271"><span class="badge log fail-bg mr-2">Fail</span>User updates the guest information</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.booking.stepdefinitions.GetBookingSteps.theUserIsAuthenticated()">
+                <span>Given the user is authenticated</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.CommonSteps.theUserCreatesABookingWith(io.cucumber.datatable.DataTable)">
+                <span>Given the user has an existing booking</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td><td>email</td><td>phone</td></tr><tr><td>2</td><td>Sam</td><td>Max</td><td>true</td><td>2027-06-15</td><td>2027-06-16</td><td>Sam@test.com</td><td>329876543210</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.booking.stepdefinitions.UpdateBookingSteps.theUserUpdatesTheGuestBooking(io.cucumber.datatable.DataTable)">
+                <span>When the user updates the guest information:</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td><td>email</td><td>phone</td></tr><tr><td>2</td><td>Jam</td><td>Martin</td><td>true</td><td>2027-06-26</td><td>2027-06-27</td><td>Jam@test.com</td><td>329876543999</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="com.booking.stepdefinitions.UpdateBookingSteps.verifyStatusCode()">
+                <span>Then the booking should be updated successfully</span>
+      <div>
+        <textarea disabled class="code-block">org.opentest4j.AssertionFailedError: expected: <200> but was: <409>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+	at com.booking.stepdefinitions.UpdateBookingSteps.verifyStatusCode(UpdateBookingSteps.java:79)
+	at ✽.the booking should be updated successfully(classpath:features/update-booking.feature:34)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="277"><span class="badge log pass-bg mr-2">Pass</span>User updates a booking with invalid details <description></div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="278"><span class="badge log pass-bg mr-2">Pass</span>User updates a booking with invalid details (Invalid room id)</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user is authenticated</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given the user has an existing booking</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td><td>email</td><td>phone</td></tr><tr><td>2</td><td>Janet</td><td>Smith</td><td>false</td><td>2027-02-01</td><td>2027-02-02</td><td>jane@test.com</td><td>329876543211</td></tr></table>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user provides invalid details:</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td><td>email</td><td>phone</td></tr><tr><td>-1</td><td>Johney</td><td>David</td><td>true</td><td>2027-03-01</td><td>2027-03-02</td><td>john@test.com</td><td>329876543210</td></tr></table>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the update should fail</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="284"><span class="badge log pass-bg mr-2">Pass</span>Unauthenticated user attempts to update a booking <description></div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="285"><span class="badge log pass-bg mr-2">Pass</span>Unauthenticated user attempts to update a booking Missing authentication cookie</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user is authenticated</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user updates an existing booking ID "1" with "no" token</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td><td>email</td><td>phone</td></tr><tr><td>2</td><td>Jam</td><td>Martin</td><td>true</td><td>2027-06-26</td><td>2027-06-27</td><td>Jam@test.com</td><td>329876543999</td></tr></table>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the update should be denied</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="290"><span class="badge log pass-bg mr-2">Pass</span>Unauthenticated user attempts to update a booking Invalid authentication cookie</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user is authenticated</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user updates an existing booking ID "1" with "invalid" token</span>
+      <div><table class='markup-table table '><tr><td>roomid</td><td>firstname</td><td>lastname</td><td>depositpaid</td><td>checkin</td><td>checkout</td><td>email</td><td>phone</td></tr><tr><td>2</td><td>Jam</td><td>Martin</td><td>true</td><td>2027-06-26</td><td>2027-06-27</td><td>Jam@test.com</td><td>329876543999</td></tr></table>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the update should be denied</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>7</span>
+</span>
+<p class="name">org.opentest4j.AssertionFailedError</p>
+<p class="duration text-sm">7 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.opentest4j.AssertionFailedError</h4>
+<span status="fail" class='badge log badge-danger'>7 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:55:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='43'>Then the booking should be created successfully</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User creates a booking with valid details.Then the booking should be created successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:55:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='50'>Then the booking should be created successfully</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User creates bookings for different guests.Then the booking should be created successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:55:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='56'>Then the booking should be created successfully</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User creates bookings for different guests.Then the booking should be created successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:55:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='62'>Then the booking should be created successfully</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User creates bookings for different guests.Then the booking should be created successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:55:54 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='68'>Then the booking should be created successfully</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User creates consecutive bookings for the same room.Then the booking should be created successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:56:03 pm</td>
+<td>
+<a href="#" class="linked" test-id='264' id='270'>Then the booking should be updated successfully</a>
+<div class="">
+<span class="badge badge-default">Update Booking.User updates an existing booking.Then the booking should be updated successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:56:04 pm</td>
+<td>
+<a href="#" class="linked" test-id='264' id='276'>Then the booking should be updated successfully</a>
+<div class="">
+<span class="badge badge-default">Update Booking.User updates the guest information.Then the booking should be updated successfully</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">java.lang.AssertionError</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.AssertionError</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:56:01 pm</td>
+<td>
+<a href="#" class="linked" test-id='227' id='231'>When the user has an existing booking</a>
+<div class="">
+<span class="badge badge-default">Retrieve Booking.User retrieve existing booking successfully.When the user has an existing booking</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">16</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>16</span>
+<span class='badge log badge-danger'>5</span>
+</span>
+<p class="name">@create</p>
+<p class="duration text-sm">21 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@create</h4>
+<span status="pass" class='badge log pass-bg'>16 passed</span>
+<span status="fail" class='badge log badge-danger'>5 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:55:52 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='39'>User creates a booking with valid details</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User creates a booking with valid details</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:55:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='46'>User creates bookings for different guests</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User creates bookings for different guests</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:55:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='52'>User creates bookings for different guests</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User creates bookings for different guests</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:55:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='58'>User creates bookings for different guests</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User creates bookings for different guests</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:55:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='64'>User creates consecutive bookings for the same room</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User creates consecutive bookings for the same room</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:54 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='74'>User cannot create a booking with invalid details (Missing room id)</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details (Missing room id)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:54 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='80'>User cannot create a booking with invalid details (Invalid room id)</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details (Invalid room id)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:54 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='86'>User cannot create a booking with invalid details (First name below minimum length)</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details (First name below minimum length)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:54 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='92'>User cannot create a booking with invalid details First name above maximum length</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details First name above maximum length</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:55 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='98'>User cannot create a booking with invalid details Last name below minimum length</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Last name below minimum length</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:55 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='104'>User cannot create a booking with invalid details Last name above maximum length</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Last name above maximum length</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:55 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='110'>User cannot create a booking with invalid details Empty email</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Empty email</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:56 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='116'>User cannot create a booking with invalid details Invalid email address</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Invalid email address</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:56 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='122'>User cannot create a booking with invalid details Empty phone number</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Empty phone number</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:56 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='128'>User cannot create a booking with invalid details Phone below minimum length</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Phone below minimum length</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:56 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='134'>User cannot create a booking with invalid details Phone above maximum length</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Phone above maximum length</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:57 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='140'>User cannot create a booking with invalid details Checkout before checkin</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Checkout before checkin</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:57 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='146'>User cannot create a booking with invalid details Empty checkin date</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Empty checkin date</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:57 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='152'>User cannot create a booking with invalid details Empty checkout date</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Empty checkout date</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:57 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='158'>User cannot create an overlapping booking for the same room</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create an overlapping booking for the same room</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:58 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='167'>User attempts to create a booking using an unsupported operation</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User attempts to create a booking using an unsupported operation</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>6</span>
+</span>
+<p class="name">@authentication</p>
+<p class="duration text-sm">6 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@authentication</h4>
+<span status="pass" class='badge log pass-bg'>6 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:50 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>User logs in with valid credentials</a>
+<div class="">
+<span class="badge badge-default">Hotel booking login.User logs in with valid credentials</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:51 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='9'>User logs in with invalid credentials - Invalid password</a>
+<div class="">
+<span class="badge badge-default">Hotel booking login.User logs in with invalid credentials - Invalid password</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:51 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='15'>User logs in with invalid credentials - Invalid username</a>
+<div class="">
+<span class="badge badge-default">Hotel booking login.User logs in with invalid credentials - Invalid username</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:52 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='21'>User logs in with invalid credentials - Empty username</a>
+<div class="">
+<span class="badge badge-default">Hotel booking login.User logs in with invalid credentials - Empty username</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:52 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='27'>User logs in with invalid credentials - Empty password</a>
+<div class="">
+<span class="badge badge-default">Hotel booking login.User logs in with invalid credentials - Empty password</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:52 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='33'>User attempts to authenticate using an unsupported operation</a>
+<div class="">
+<span class="badge badge-default">Hotel booking login.User attempts to authenticate using an unsupported operation</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@boundary</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@boundary</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:55:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='64'>User creates consecutive bookings for the same room</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User creates consecutive bookings for the same room</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:57 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='158'>User cannot create an overlapping booking for the same room</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create an overlapping booking for the same room</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>31</span>
+<span class='badge log badge-danger'>8</span>
+</span>
+<p class="name">@booking</p>
+<p class="duration text-sm">39 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@booking</h4>
+<span status="pass" class='badge log pass-bg'>31 passed</span>
+<span status="fail" class='badge log badge-danger'>8 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:55:52 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='39'>User creates a booking with valid details</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User creates a booking with valid details</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:55:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='46'>User creates bookings for different guests</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User creates bookings for different guests</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:55:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='52'>User creates bookings for different guests</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User creates bookings for different guests</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:55:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='58'>User creates bookings for different guests</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User creates bookings for different guests</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:55:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='64'>User creates consecutive bookings for the same room</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User creates consecutive bookings for the same room</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:54 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='74'>User cannot create a booking with invalid details (Missing room id)</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details (Missing room id)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:54 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='80'>User cannot create a booking with invalid details (Invalid room id)</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details (Invalid room id)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:54 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='86'>User cannot create a booking with invalid details (First name below minimum length)</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details (First name below minimum length)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:54 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='92'>User cannot create a booking with invalid details First name above maximum length</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details First name above maximum length</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:55 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='98'>User cannot create a booking with invalid details Last name below minimum length</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Last name below minimum length</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:55 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='104'>User cannot create a booking with invalid details Last name above maximum length</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Last name above maximum length</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:55 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='110'>User cannot create a booking with invalid details Empty email</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Empty email</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:56 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='116'>User cannot create a booking with invalid details Invalid email address</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Invalid email address</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:56 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='122'>User cannot create a booking with invalid details Empty phone number</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Empty phone number</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:56 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='128'>User cannot create a booking with invalid details Phone below minimum length</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Phone below minimum length</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:56 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='134'>User cannot create a booking with invalid details Phone above maximum length</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Phone above maximum length</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:57 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='140'>User cannot create a booking with invalid details Checkout before checkin</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Checkout before checkin</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:57 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='146'>User cannot create a booking with invalid details Empty checkin date</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Empty checkin date</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:57 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='152'>User cannot create a booking with invalid details Empty checkout date</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Empty checkout date</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:57 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='158'>User cannot create an overlapping booking for the same room</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create an overlapping booking for the same room</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:58 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='167'>User attempts to create a booking using an unsupported operation</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User attempts to create a booking using an unsupported operation</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:58 pm</td>
+<td>
+<a href="#" class="linked" test-id='173' id='174'>User deletes an existing booking</a>
+<div class="">
+<span class="badge badge-default">Delete Booking.User deletes an existing booking</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:58 pm</td>
+<td>
+<a href="#" class="linked" test-id='173' id='180'>User attempts to delete a booking that does not exist</a>
+<div class="">
+<span class="badge badge-default">Delete Booking.User attempts to delete a booking that does not exist</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:59 pm</td>
+<td>
+<a href="#" class="linked" test-id='173' id='189'>Unauthenticated user attempts to delete a booking Missing authentication cookie</a>
+<div class="">
+<span class="badge badge-default">Delete Booking.Unauthenticated user attempts to delete a booking Missing authentication cookie</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:59 pm</td>
+<td>
+<a href="#" class="linked" test-id='173' id='194'>Unauthenticated user attempts to delete a booking Invalid authentication cookie</a>
+<div class="">
+<span class="badge badge-default">Delete Booking.Unauthenticated user attempts to delete a booking Invalid authentication cookie</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:59 pm</td>
+<td>
+<a href="#" class="linked" test-id='173' id='200'>User attempts to delete a invalid booking Non-existing booking</a>
+<div class="">
+<span class="badge badge-default">Delete Booking.User attempts to delete a invalid booking Non-existing booking</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:00 pm</td>
+<td>
+<a href="#" class="linked" test-id='173' id='205'>User attempts to delete a invalid booking Invalid booking ID</a>
+<div class="">
+<span class="badge badge-default">Delete Booking.User attempts to delete a invalid booking Invalid booking ID</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:00 pm</td>
+<td>
+<a href="#" class="linked" test-id='210' id='211'>User completes the full booking journey</a>
+<div class="">
+<span class="badge badge-default">End-to-end hotel booking journey.User completes the full booking journey</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:56:01 pm</td>
+<td>
+<a href="#" class="linked" test-id='227' id='228'>User retrieve existing booking successfully</a>
+<div class="">
+<span class="badge badge-default">Retrieve Booking.User retrieve existing booking successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:01 pm</td>
+<td>
+<a href="#" class="linked" test-id='227' id='236'>User attempts to retrieve a booking that does not exist</a>
+<div class="">
+<span class="badge badge-default">Retrieve Booking.User attempts to retrieve a booking that does not exist</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:02 pm</td>
+<td>
+<a href="#" class="linked" test-id='227' id='241'>User attempts to retrieve a booking that does not exist</a>
+<div class="">
+<span class="badge badge-default">Retrieve Booking.User attempts to retrieve a booking that does not exist</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:02 pm</td>
+<td>
+<a href="#" class="linked" test-id='227' id='247'>Unauthenticated user attempts to retrieve a booking Missing authentication cookie</a>
+<div class="">
+<span class="badge badge-default">Retrieve Booking.Unauthenticated user attempts to retrieve a booking Missing authentication cookie</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:02 pm</td>
+<td>
+<a href="#" class="linked" test-id='227' id='252'>Unauthenticated user attempts to retrieve a booking Invalid authentication cookie</a>
+<div class="">
+<span class="badge badge-default">Retrieve Booking.Unauthenticated user attempts to retrieve a booking Invalid authentication cookie</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:03 pm</td>
+<td>
+<a href="#" class="linked" test-id='257' id='258'>Partial update booking not allowed</a>
+<div class="">
+<span class="badge badge-default">Partially update a hotel booking.Partial update booking not allowed</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:56:03 pm</td>
+<td>
+<a href="#" class="linked" test-id='264' id='265'>User updates an existing booking</a>
+<div class="">
+<span class="badge badge-default">Update Booking.User updates an existing booking</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:56:03 pm</td>
+<td>
+<a href="#" class="linked" test-id='264' id='271'>User updates the guest information</a>
+<div class="">
+<span class="badge badge-default">Update Booking.User updates the guest information</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:04 pm</td>
+<td>
+<a href="#" class="linked" test-id='264' id='278'>User updates a booking with invalid details (Invalid room id)</a>
+<div class="">
+<span class="badge badge-default">Update Booking.User updates a booking with invalid details (Invalid room id)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:04 pm</td>
+<td>
+<a href="#" class="linked" test-id='264' id='285'>Unauthenticated user attempts to update a booking Missing authentication cookie</a>
+<div class="">
+<span class="badge badge-default">Update Booking.Unauthenticated user attempts to update a booking Missing authentication cookie</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:04 pm</td>
+<td>
+<a href="#" class="linked" test-id='264' id='290'>Unauthenticated user attempts to update a booking Invalid authentication cookie</a>
+<div class="">
+<span class="badge badge-default">Update Booking.Unauthenticated user attempts to update a booking Invalid authentication cookie</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>6</span>
+</span>
+<p class="name">@delete</p>
+<p class="duration text-sm">6 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@delete</h4>
+<span status="pass" class='badge log pass-bg'>6 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:58 pm</td>
+<td>
+<a href="#" class="linked" test-id='173' id='174'>User deletes an existing booking</a>
+<div class="">
+<span class="badge badge-default">Delete Booking.User deletes an existing booking</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:58 pm</td>
+<td>
+<a href="#" class="linked" test-id='173' id='180'>User attempts to delete a booking that does not exist</a>
+<div class="">
+<span class="badge badge-default">Delete Booking.User attempts to delete a booking that does not exist</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:59 pm</td>
+<td>
+<a href="#" class="linked" test-id='173' id='189'>Unauthenticated user attempts to delete a booking Missing authentication cookie</a>
+<div class="">
+<span class="badge badge-default">Delete Booking.Unauthenticated user attempts to delete a booking Missing authentication cookie</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:59 pm</td>
+<td>
+<a href="#" class="linked" test-id='173' id='194'>Unauthenticated user attempts to delete a booking Invalid authentication cookie</a>
+<div class="">
+<span class="badge badge-default">Delete Booking.Unauthenticated user attempts to delete a booking Invalid authentication cookie</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:59 pm</td>
+<td>
+<a href="#" class="linked" test-id='173' id='200'>User attempts to delete a invalid booking Non-existing booking</a>
+<div class="">
+<span class="badge badge-default">Delete Booking.User attempts to delete a invalid booking Non-existing booking</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:00 pm</td>
+<td>
+<a href="#" class="linked" test-id='173' id='205'>User attempts to delete a invalid booking Invalid booking ID</a>
+<div class="">
+<span class="badge badge-default">Delete Booking.User attempts to delete a invalid booking Invalid booking ID</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>6</span>
+</span>
+<p class="name">@login</p>
+<p class="duration text-sm">6 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@login</h4>
+<span status="pass" class='badge log pass-bg'>6 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:50 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>User logs in with valid credentials</a>
+<div class="">
+<span class="badge badge-default">Hotel booking login.User logs in with valid credentials</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:51 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='9'>User logs in with invalid credentials - Invalid password</a>
+<div class="">
+<span class="badge badge-default">Hotel booking login.User logs in with invalid credentials - Invalid password</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:51 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='15'>User logs in with invalid credentials - Invalid username</a>
+<div class="">
+<span class="badge badge-default">Hotel booking login.User logs in with invalid credentials - Invalid username</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:52 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='21'>User logs in with invalid credentials - Empty username</a>
+<div class="">
+<span class="badge badge-default">Hotel booking login.User logs in with invalid credentials - Empty username</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:52 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='27'>User logs in with invalid credentials - Empty password</a>
+<div class="">
+<span class="badge badge-default">Hotel booking login.User logs in with invalid credentials - Empty password</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:52 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='33'>User attempts to authenticate using an unsupported operation</a>
+<div class="">
+<span class="badge badge-default">Hotel booking login.User attempts to authenticate using an unsupported operation</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@crud</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@crud</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:00 pm</td>
+<td>
+<a href="#" class="linked" test-id='210' id='211'>User completes the full booking journey</a>
+<div class="">
+<span class="badge badge-default">End-to-end hotel booking journey.User completes the full booking journey</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>3</span>
+<span class='badge log badge-danger'>8</span>
+</span>
+<p class="name">@positive</p>
+<p class="duration text-sm">11 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@positive</h4>
+<span status="pass" class='badge log pass-bg'>3 passed</span>
+<span status="fail" class='badge log badge-danger'>8 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:50 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>User logs in with valid credentials</a>
+<div class="">
+<span class="badge badge-default">Hotel booking login.User logs in with valid credentials</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:55:52 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='39'>User creates a booking with valid details</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User creates a booking with valid details</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:55:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='46'>User creates bookings for different guests</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User creates bookings for different guests</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:55:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='52'>User creates bookings for different guests</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User creates bookings for different guests</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:55:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='58'>User creates bookings for different guests</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User creates bookings for different guests</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:55:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='64'>User creates consecutive bookings for the same room</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User creates consecutive bookings for the same room</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:58 pm</td>
+<td>
+<a href="#" class="linked" test-id='173' id='174'>User deletes an existing booking</a>
+<div class="">
+<span class="badge badge-default">Delete Booking.User deletes an existing booking</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:00 pm</td>
+<td>
+<a href="#" class="linked" test-id='210' id='211'>User completes the full booking journey</a>
+<div class="">
+<span class="badge badge-default">End-to-end hotel booking journey.User completes the full booking journey</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:56:01 pm</td>
+<td>
+<a href="#" class="linked" test-id='227' id='228'>User retrieve existing booking successfully</a>
+<div class="">
+<span class="badge badge-default">Retrieve Booking.User retrieve existing booking successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:56:03 pm</td>
+<td>
+<a href="#" class="linked" test-id='264' id='265'>User updates an existing booking</a>
+<div class="">
+<span class="badge badge-default">Update Booking.User updates an existing booking</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:56:03 pm</td>
+<td>
+<a href="#" class="linked" test-id='264' id='271'>User updates the guest information</a>
+<div class="">
+<span class="badge badge-default">Update Booking.User updates the guest information</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>31</span>
+<span class='badge log badge-danger'>8</span>
+</span>
+<p class="name">@hotel-booking-regression</p>
+<p class="duration text-sm">39 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@hotel-booking-regression</h4>
+<span status="pass" class='badge log pass-bg'>31 passed</span>
+<span status="fail" class='badge log badge-danger'>8 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:55:52 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='39'>User creates a booking with valid details</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User creates a booking with valid details</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:55:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='46'>User creates bookings for different guests</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User creates bookings for different guests</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:55:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='52'>User creates bookings for different guests</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User creates bookings for different guests</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:55:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='58'>User creates bookings for different guests</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User creates bookings for different guests</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:55:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='64'>User creates consecutive bookings for the same room</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User creates consecutive bookings for the same room</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:54 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='74'>User cannot create a booking with invalid details (Missing room id)</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details (Missing room id)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:54 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='80'>User cannot create a booking with invalid details (Invalid room id)</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details (Invalid room id)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:54 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='86'>User cannot create a booking with invalid details (First name below minimum length)</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details (First name below minimum length)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:54 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='92'>User cannot create a booking with invalid details First name above maximum length</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details First name above maximum length</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:55 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='98'>User cannot create a booking with invalid details Last name below minimum length</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Last name below minimum length</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:55 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='104'>User cannot create a booking with invalid details Last name above maximum length</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Last name above maximum length</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:55 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='110'>User cannot create a booking with invalid details Empty email</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Empty email</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:56 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='116'>User cannot create a booking with invalid details Invalid email address</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Invalid email address</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:56 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='122'>User cannot create a booking with invalid details Empty phone number</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Empty phone number</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:56 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='128'>User cannot create a booking with invalid details Phone below minimum length</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Phone below minimum length</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:56 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='134'>User cannot create a booking with invalid details Phone above maximum length</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Phone above maximum length</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:57 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='140'>User cannot create a booking with invalid details Checkout before checkin</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Checkout before checkin</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:57 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='146'>User cannot create a booking with invalid details Empty checkin date</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Empty checkin date</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:57 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='152'>User cannot create a booking with invalid details Empty checkout date</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Empty checkout date</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:57 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='158'>User cannot create an overlapping booking for the same room</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create an overlapping booking for the same room</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:58 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='167'>User attempts to create a booking using an unsupported operation</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User attempts to create a booking using an unsupported operation</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:58 pm</td>
+<td>
+<a href="#" class="linked" test-id='173' id='174'>User deletes an existing booking</a>
+<div class="">
+<span class="badge badge-default">Delete Booking.User deletes an existing booking</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:58 pm</td>
+<td>
+<a href="#" class="linked" test-id='173' id='180'>User attempts to delete a booking that does not exist</a>
+<div class="">
+<span class="badge badge-default">Delete Booking.User attempts to delete a booking that does not exist</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:59 pm</td>
+<td>
+<a href="#" class="linked" test-id='173' id='189'>Unauthenticated user attempts to delete a booking Missing authentication cookie</a>
+<div class="">
+<span class="badge badge-default">Delete Booking.Unauthenticated user attempts to delete a booking Missing authentication cookie</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:59 pm</td>
+<td>
+<a href="#" class="linked" test-id='173' id='194'>Unauthenticated user attempts to delete a booking Invalid authentication cookie</a>
+<div class="">
+<span class="badge badge-default">Delete Booking.Unauthenticated user attempts to delete a booking Invalid authentication cookie</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:59 pm</td>
+<td>
+<a href="#" class="linked" test-id='173' id='200'>User attempts to delete a invalid booking Non-existing booking</a>
+<div class="">
+<span class="badge badge-default">Delete Booking.User attempts to delete a invalid booking Non-existing booking</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:00 pm</td>
+<td>
+<a href="#" class="linked" test-id='173' id='205'>User attempts to delete a invalid booking Invalid booking ID</a>
+<div class="">
+<span class="badge badge-default">Delete Booking.User attempts to delete a invalid booking Invalid booking ID</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:00 pm</td>
+<td>
+<a href="#" class="linked" test-id='210' id='211'>User completes the full booking journey</a>
+<div class="">
+<span class="badge badge-default">End-to-end hotel booking journey.User completes the full booking journey</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:56:01 pm</td>
+<td>
+<a href="#" class="linked" test-id='227' id='228'>User retrieve existing booking successfully</a>
+<div class="">
+<span class="badge badge-default">Retrieve Booking.User retrieve existing booking successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:01 pm</td>
+<td>
+<a href="#" class="linked" test-id='227' id='236'>User attempts to retrieve a booking that does not exist</a>
+<div class="">
+<span class="badge badge-default">Retrieve Booking.User attempts to retrieve a booking that does not exist</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:02 pm</td>
+<td>
+<a href="#" class="linked" test-id='227' id='241'>User attempts to retrieve a booking that does not exist</a>
+<div class="">
+<span class="badge badge-default">Retrieve Booking.User attempts to retrieve a booking that does not exist</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:02 pm</td>
+<td>
+<a href="#" class="linked" test-id='227' id='247'>Unauthenticated user attempts to retrieve a booking Missing authentication cookie</a>
+<div class="">
+<span class="badge badge-default">Retrieve Booking.Unauthenticated user attempts to retrieve a booking Missing authentication cookie</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:02 pm</td>
+<td>
+<a href="#" class="linked" test-id='227' id='252'>Unauthenticated user attempts to retrieve a booking Invalid authentication cookie</a>
+<div class="">
+<span class="badge badge-default">Retrieve Booking.Unauthenticated user attempts to retrieve a booking Invalid authentication cookie</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:03 pm</td>
+<td>
+<a href="#" class="linked" test-id='257' id='258'>Partial update booking not allowed</a>
+<div class="">
+<span class="badge badge-default">Partially update a hotel booking.Partial update booking not allowed</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:56:03 pm</td>
+<td>
+<a href="#" class="linked" test-id='264' id='265'>User updates an existing booking</a>
+<div class="">
+<span class="badge badge-default">Update Booking.User updates an existing booking</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:56:03 pm</td>
+<td>
+<a href="#" class="linked" test-id='264' id='271'>User updates the guest information</a>
+<div class="">
+<span class="badge badge-default">Update Booking.User updates the guest information</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:04 pm</td>
+<td>
+<a href="#" class="linked" test-id='264' id='278'>User updates a booking with invalid details (Invalid room id)</a>
+<div class="">
+<span class="badge badge-default">Update Booking.User updates a booking with invalid details (Invalid room id)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:04 pm</td>
+<td>
+<a href="#" class="linked" test-id='264' id='285'>Unauthenticated user attempts to update a booking Missing authentication cookie</a>
+<div class="">
+<span class="badge badge-default">Update Booking.Unauthenticated user attempts to update a booking Missing authentication cookie</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:04 pm</td>
+<td>
+<a href="#" class="linked" test-id='264' id='290'>Unauthenticated user attempts to update a booking Invalid authentication cookie</a>
+<div class="">
+<span class="badge badge-default">Update Booking.Unauthenticated user attempts to update a booking Invalid authentication cookie</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>3</span>
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">@update</p>
+<p class="duration text-sm">5 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@update</h4>
+<span status="pass" class='badge log pass-bg'>3 passed</span>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:56:03 pm</td>
+<td>
+<a href="#" class="linked" test-id='264' id='265'>User updates an existing booking</a>
+<div class="">
+<span class="badge badge-default">Update Booking.User updates an existing booking</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:56:03 pm</td>
+<td>
+<a href="#" class="linked" test-id='264' id='271'>User updates the guest information</a>
+<div class="">
+<span class="badge badge-default">Update Booking.User updates the guest information</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:04 pm</td>
+<td>
+<a href="#" class="linked" test-id='264' id='278'>User updates a booking with invalid details (Invalid room id)</a>
+<div class="">
+<span class="badge badge-default">Update Booking.User updates a booking with invalid details (Invalid room id)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:04 pm</td>
+<td>
+<a href="#" class="linked" test-id='264' id='285'>Unauthenticated user attempts to update a booking Missing authentication cookie</a>
+<div class="">
+<span class="badge badge-default">Update Booking.Unauthenticated user attempts to update a booking Missing authentication cookie</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:04 pm</td>
+<td>
+<a href="#" class="linked" test-id='264' id='290'>Unauthenticated user attempts to update a booking Invalid authentication cookie</a>
+<div class="">
+<span class="badge badge-default">Update Booking.Unauthenticated user attempts to update a booking Invalid authentication cookie</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>14</span>
+</span>
+<p class="name">@validation</p>
+<p class="duration text-sm">14 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@validation</h4>
+<span status="pass" class='badge log pass-bg'>14 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:54 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='74'>User cannot create a booking with invalid details (Missing room id)</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details (Missing room id)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:54 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='80'>User cannot create a booking with invalid details (Invalid room id)</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details (Invalid room id)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:54 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='86'>User cannot create a booking with invalid details (First name below minimum length)</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details (First name below minimum length)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:54 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='92'>User cannot create a booking with invalid details First name above maximum length</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details First name above maximum length</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:55 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='98'>User cannot create a booking with invalid details Last name below minimum length</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Last name below minimum length</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:55 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='104'>User cannot create a booking with invalid details Last name above maximum length</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Last name above maximum length</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:55 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='110'>User cannot create a booking with invalid details Empty email</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Empty email</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:56 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='116'>User cannot create a booking with invalid details Invalid email address</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Invalid email address</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:56 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='122'>User cannot create a booking with invalid details Empty phone number</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Empty phone number</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:56 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='128'>User cannot create a booking with invalid details Phone below minimum length</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Phone below minimum length</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:56 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='134'>User cannot create a booking with invalid details Phone above maximum length</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Phone above maximum length</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:57 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='140'>User cannot create a booking with invalid details Checkout before checkin</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Checkout before checkin</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:57 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='146'>User cannot create a booking with invalid details Empty checkin date</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Empty checkin date</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:57 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='152'>User cannot create a booking with invalid details Empty checkout date</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Empty checkout date</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@e2e</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@e2e</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:00 pm</td>
+<td>
+<a href="#" class="linked" test-id='210' id='211'>User completes the full booking journey</a>
+<div class="">
+<span class="badge badge-default">End-to-end hotel booking journey.User completes the full booking journey</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@partial-update</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@partial-update</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:03 pm</td>
+<td>
+<a href="#" class="linked" test-id='257' id='258'>Partial update booking not allowed</a>
+<div class="">
+<span class="badge badge-default">Partially update a hotel booking.Partial update booking not allowed</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>3</span>
+<span class='badge log badge-danger'>3</span>
+</span>
+<p class="name">@smoke</p>
+<p class="duration text-sm">6 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@smoke</h4>
+<span status="pass" class='badge log pass-bg'>3 passed</span>
+<span status="fail" class='badge log badge-danger'>3 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:50 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>User logs in with valid credentials</a>
+<div class="">
+<span class="badge badge-default">Hotel booking login.User logs in with valid credentials</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:55:52 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='39'>User creates a booking with valid details</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User creates a booking with valid details</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:58 pm</td>
+<td>
+<a href="#" class="linked" test-id='173' id='174'>User deletes an existing booking</a>
+<div class="">
+<span class="badge badge-default">Delete Booking.User deletes an existing booking</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:00 pm</td>
+<td>
+<a href="#" class="linked" test-id='210' id='211'>User completes the full booking journey</a>
+<div class="">
+<span class="badge badge-default">End-to-end hotel booking journey.User completes the full booking journey</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:56:01 pm</td>
+<td>
+<a href="#" class="linked" test-id='227' id='228'>User retrieve existing booking successfully</a>
+<div class="">
+<span class="badge badge-default">Retrieve Booking.User retrieve existing booking successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:56:03 pm</td>
+<td>
+<a href="#" class="linked" test-id='264' id='265'>User updates an existing booking</a>
+<div class="">
+<span class="badge badge-default">Update Booking.User updates an existing booking</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>4</span>
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@retrieve</p>
+<p class="duration text-sm">5 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@retrieve</h4>
+<span status="pass" class='badge log pass-bg'>4 passed</span>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:56:01 pm</td>
+<td>
+<a href="#" class="linked" test-id='227' id='228'>User retrieve existing booking successfully</a>
+<div class="">
+<span class="badge badge-default">Retrieve Booking.User retrieve existing booking successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:01 pm</td>
+<td>
+<a href="#" class="linked" test-id='227' id='236'>User attempts to retrieve a booking that does not exist</a>
+<div class="">
+<span class="badge badge-default">Retrieve Booking.User attempts to retrieve a booking that does not exist</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:02 pm</td>
+<td>
+<a href="#" class="linked" test-id='227' id='241'>User attempts to retrieve a booking that does not exist</a>
+<div class="">
+<span class="badge badge-default">Retrieve Booking.User attempts to retrieve a booking that does not exist</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:02 pm</td>
+<td>
+<a href="#" class="linked" test-id='227' id='247'>Unauthenticated user attempts to retrieve a booking Missing authentication cookie</a>
+<div class="">
+<span class="badge badge-default">Retrieve Booking.Unauthenticated user attempts to retrieve a booking Missing authentication cookie</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:02 pm</td>
+<td>
+<a href="#" class="linked" test-id='227' id='252'>Unauthenticated user attempts to retrieve a booking Invalid authentication cookie</a>
+<div class="">
+<span class="badge badge-default">Retrieve Booking.Unauthenticated user attempts to retrieve a booking Invalid authentication cookie</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>34</span>
+</span>
+<p class="name">@negative</p>
+<p class="duration text-sm">34 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@negative</h4>
+<span status="pass" class='badge log pass-bg'>34 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:51 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='9'>User logs in with invalid credentials - Invalid password</a>
+<div class="">
+<span class="badge badge-default">Hotel booking login.User logs in with invalid credentials - Invalid password</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:51 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='15'>User logs in with invalid credentials - Invalid username</a>
+<div class="">
+<span class="badge badge-default">Hotel booking login.User logs in with invalid credentials - Invalid username</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:52 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='21'>User logs in with invalid credentials - Empty username</a>
+<div class="">
+<span class="badge badge-default">Hotel booking login.User logs in with invalid credentials - Empty username</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:52 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='27'>User logs in with invalid credentials - Empty password</a>
+<div class="">
+<span class="badge badge-default">Hotel booking login.User logs in with invalid credentials - Empty password</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:52 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='33'>User attempts to authenticate using an unsupported operation</a>
+<div class="">
+<span class="badge badge-default">Hotel booking login.User attempts to authenticate using an unsupported operation</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:54 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='74'>User cannot create a booking with invalid details (Missing room id)</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details (Missing room id)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:54 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='80'>User cannot create a booking with invalid details (Invalid room id)</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details (Invalid room id)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:54 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='86'>User cannot create a booking with invalid details (First name below minimum length)</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details (First name below minimum length)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:54 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='92'>User cannot create a booking with invalid details First name above maximum length</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details First name above maximum length</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:55 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='98'>User cannot create a booking with invalid details Last name below minimum length</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Last name below minimum length</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:55 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='104'>User cannot create a booking with invalid details Last name above maximum length</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Last name above maximum length</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:55 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='110'>User cannot create a booking with invalid details Empty email</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Empty email</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:56 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='116'>User cannot create a booking with invalid details Invalid email address</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Invalid email address</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:56 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='122'>User cannot create a booking with invalid details Empty phone number</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Empty phone number</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:56 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='128'>User cannot create a booking with invalid details Phone below minimum length</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Phone below minimum length</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:56 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='134'>User cannot create a booking with invalid details Phone above maximum length</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Phone above maximum length</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:57 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='140'>User cannot create a booking with invalid details Checkout before checkin</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Checkout before checkin</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:57 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='146'>User cannot create a booking with invalid details Empty checkin date</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Empty checkin date</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:57 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='152'>User cannot create a booking with invalid details Empty checkout date</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create a booking with invalid details Empty checkout date</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:57 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='158'>User cannot create an overlapping booking for the same room</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User cannot create an overlapping booking for the same room</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:58 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='167'>User attempts to create a booking using an unsupported operation</a>
+<div class="">
+<span class="badge badge-default">Create Booking.User attempts to create a booking using an unsupported operation</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:58 pm</td>
+<td>
+<a href="#" class="linked" test-id='173' id='180'>User attempts to delete a booking that does not exist</a>
+<div class="">
+<span class="badge badge-default">Delete Booking.User attempts to delete a booking that does not exist</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:59 pm</td>
+<td>
+<a href="#" class="linked" test-id='173' id='189'>Unauthenticated user attempts to delete a booking Missing authentication cookie</a>
+<div class="">
+<span class="badge badge-default">Delete Booking.Unauthenticated user attempts to delete a booking Missing authentication cookie</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:59 pm</td>
+<td>
+<a href="#" class="linked" test-id='173' id='194'>Unauthenticated user attempts to delete a booking Invalid authentication cookie</a>
+<div class="">
+<span class="badge badge-default">Delete Booking.Unauthenticated user attempts to delete a booking Invalid authentication cookie</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:55:59 pm</td>
+<td>
+<a href="#" class="linked" test-id='173' id='200'>User attempts to delete a invalid booking Non-existing booking</a>
+<div class="">
+<span class="badge badge-default">Delete Booking.User attempts to delete a invalid booking Non-existing booking</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:00 pm</td>
+<td>
+<a href="#" class="linked" test-id='173' id='205'>User attempts to delete a invalid booking Invalid booking ID</a>
+<div class="">
+<span class="badge badge-default">Delete Booking.User attempts to delete a invalid booking Invalid booking ID</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:01 pm</td>
+<td>
+<a href="#" class="linked" test-id='227' id='236'>User attempts to retrieve a booking that does not exist</a>
+<div class="">
+<span class="badge badge-default">Retrieve Booking.User attempts to retrieve a booking that does not exist</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:02 pm</td>
+<td>
+<a href="#" class="linked" test-id='227' id='241'>User attempts to retrieve a booking that does not exist</a>
+<div class="">
+<span class="badge badge-default">Retrieve Booking.User attempts to retrieve a booking that does not exist</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:02 pm</td>
+<td>
+<a href="#" class="linked" test-id='227' id='247'>Unauthenticated user attempts to retrieve a booking Missing authentication cookie</a>
+<div class="">
+<span class="badge badge-default">Retrieve Booking.Unauthenticated user attempts to retrieve a booking Missing authentication cookie</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:02 pm</td>
+<td>
+<a href="#" class="linked" test-id='227' id='252'>Unauthenticated user attempts to retrieve a booking Invalid authentication cookie</a>
+<div class="">
+<span class="badge badge-default">Retrieve Booking.Unauthenticated user attempts to retrieve a booking Invalid authentication cookie</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:03 pm</td>
+<td>
+<a href="#" class="linked" test-id='257' id='258'>Partial update booking not allowed</a>
+<div class="">
+<span class="badge badge-default">Partially update a hotel booking.Partial update booking not allowed</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:04 pm</td>
+<td>
+<a href="#" class="linked" test-id='264' id='278'>User updates a booking with invalid details (Invalid room id)</a>
+<div class="">
+<span class="badge badge-default">Update Booking.User updates a booking with invalid details (Invalid room id)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:04 pm</td>
+<td>
+<a href="#" class="linked" test-id='264' id='285'>Unauthenticated user attempts to update a booking Missing authentication cookie</a>
+<div class="">
+<span class="badge badge-default">Update Booking.Unauthenticated user attempts to update a booking Missing authentication cookie</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:56:04 pm</td>
+<td>
+<a href="#" class="linked" test-id='264' id='290'>Unauthenticated user attempts to update a booking Invalid authentication cookie</a>
+<div class="">
+<span class="badge badge-default">Update Booking.Unauthenticated user attempts to update a booking Invalid authentication cookie</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Jun 25, 2026 12:55:49 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Jun 25, 2026 12:56:05 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>4</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>3</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='57%'>
+<b>4</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='42%'><b>3</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='82%'><b>37</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='17%'><b>8</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='89%'><b>169</b> steps passed</small></div>
+<div>
+<small data-tooltip='4%'><b>8</b> steps failed,
+<b>11</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Hotel booking login":2.589,"Create Booking":5.729,"Delete Booking":1.917,"End-to-end hotel booking journey":1.022,"Retrieve Booking":1.642,"Partially update a hotel booking":0.388,"Update Booking":1.626
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@create</td>
+<td>16</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>76.19%</td>
+</tr>
+<tr>
+<td>@authentication</td>
+<td>6</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@boundary</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>@booking</td>
+<td>31</td>
+<td>8</td>
+<td>0</td>
+<td>0</td>
+<td>79.487%</td>
+</tr>
+<tr>
+<td>@delete</td>
+<td>6</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@login</td>
+<td>6</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@crud</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@positive</td>
+<td>3</td>
+<td>8</td>
+<td>0</td>
+<td>0</td>
+<td>27.273%</td>
+</tr>
+<tr>
+<td>@hotel-booking-regression</td>
+<td>31</td>
+<td>8</td>
+<td>0</td>
+<td>0</td>
+<td>79.487%</td>
+</tr>
+<tr>
+<td>@update</td>
+<td>3</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>60%</td>
+</tr>
+<tr>
+<td>@validation</td>
+<td>14</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@e2e</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@partial-update</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@smoke</td>
+<td>3</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>@retrieve</td>
+<td>4</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>80%</td>
+</tr>
+<tr>
+<td>@negative</td>
+<td>34</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>Framework</td>
+<td>Rest Assured + Cucumber + JUnit5</td>
+</tr>
+<tr>
+<td>Tester</td>
+<td>Shubha</td>
+</tr>
+<tr>
+<td>Project</td>
+<td>Hotel Booking API Automation Framework</td>
+</tr>
+<tr>
+<td>Environment</td>
+<td>QA</td>
+</tr>
+<tr>
+<td>Language</td>
+<td>Java</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 4,
+failParent: 3,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 37,
+failChild: 8,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 169,
+failGrandChild: 8,
+warningGrandChild: 0,
+skipGrandChild: 11,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

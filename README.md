@@ -148,7 +148,7 @@ After running tests, view reports:
 - **Cucumber Report:** `target/cucumber-reports/cucumber.html`
 
 ### Extent Report Dashboard
-![img.png](img.png)
+![ExtentDashboard.png](report/ExtentDashboard.png)
 
 ## 🔗 API Specification
 
